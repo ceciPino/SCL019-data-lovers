@@ -1,0 +1,11 @@
+body {
+    background-color: beige;
+    background-image: url(https://www.teahub.io/photos/full/62-626076_studio-ghibli-sky-background.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #FEFEE3;
+    align-items: center;
+    cursor: pointer;
+    }
