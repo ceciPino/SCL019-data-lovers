@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Song+Myung&family=Yeseva+One&display=swap');
+
 body {
     background-color: beige;
     background-image: url(https://www.teahub.io/photos/full/62-626076_studio-ghibli-sky-background.jpg);
@@ -9,3 +11,40 @@ body {
     align-items: center;
     cursor: pointer;
     }
+
+h1 {
+
+font-family: 'Yeseva One', serif;
+font-size: 100px;
+align-items: center;
+justify-content: center;
+text-align: center;
+color: #CF2D25;
+
+}
+
+h2 {
+
+font-family: 'Song Myung', serif;
+font-size: 40px;
+color: #DA352D;
+padding-left: 40px;
+
+}
+
+h3 {
+
+font-family: 'Song Myung', serif;
+font-size: 20px;
+align-items: center;
+justify-content: center;
+text-align: center;
+color: #FFF3E2;
+}
+
+main {
+
+    font-family: 'Song Myung', serif;
+    font-size: 20px;
+    color: #FFF3E2;    
+}
