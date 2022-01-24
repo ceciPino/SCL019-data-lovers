@@ -1,4 +1,9 @@
-// estas funciones son de ejemplo
+// FUNCIÓN PARA ORDENAR DATOS
+
+
+// FUNCIÓN PARA FILTRAR DATOS
+
+// 
 
 export const example = () => {
   return 'example';
