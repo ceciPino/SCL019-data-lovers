@@ -33,7 +33,7 @@ h2 {
 font-family: 'Song Myung', serif;
 font-size: 40px;
 color: #DA352D;
-padding-left: 40px;
+padding-left: 75px;
 
 }
 
@@ -51,7 +51,7 @@ main {
 
 font-family: 'Song Myung', serif;
 font-size: 20px;
-color: #FFF3E2;    
+color: #FFF3E2;
 }
 
 .audio {
@@ -81,4 +81,34 @@ padding: 20px;
 font-size: 30px;
 text-align: center;
 
+}
+
+.menu-content {
+display: flex;
+flex-direction: column;
+cursor: default;
+}
+
+.menu-content a {
+color: white;
+font-size: 30px;
+text-decoration: none;
+justify-content: normal;
+text-align: center;
+width: 15%;
+padding: 0.4rem;
+margin: 2rem 2rem 2rem;
+border-radius: 1.2rem 1.2rem 1.2rem 1.2rem;
+}
+
+#películas {
+background-color: #779ecb;
+}
+
+#personajes{
+background-color: #ff6565;
+}
+
+#directores {
+background-color: #efe670;
 }
