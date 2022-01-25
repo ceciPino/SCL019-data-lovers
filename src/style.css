@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Song+Myung&family=Yeseva+One&display=swap');
 
 body {
-    background-color: beige;
-    background-image: url(https://www.teahub.io/photos/full/62-626076_studio-ghibli-sky-background.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #FEFEE3;
-    align-items: center;
-    cursor: pointer;
-    }
+background-color: beige;
+background-image: url(https://www.teahub.io/photos/full/62-626076_studio-ghibli-sky-background.jpg);
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+background-color: #FEFEE3;
+align-items: center;
+cursor: pointer;
+
+}
 
 h1 {
 
@@ -20,6 +21,10 @@ align-items: center;
 justify-content: center;
 text-align: center;
 color: #CF2D25;
+margin-top: 400px;
+margin-bottom: 400px;
+
+
 
 }
 
@@ -44,7 +49,36 @@ color: #FFF3E2;
 
 main {
 
-    font-family: 'Song Myung', serif;
-    font-size: 20px;
-    color: #FFF3E2;    
+font-family: 'Song Myung', serif;
+font-size: 20px;
+color: #FFF3E2;    
+}
+
+.audio {
+
+align-items: top right;
+justify-content: right;
+position: absolute; top: 10px; right: 10px;
+
+}
+
+.grid-container {
+display: grid;
+grid-template-columns: auto auto auto;
+padding: 10px;
+justify-content: center;
+grid-column-gap: 300px;
+grid-row-gap: 100px;
+
+}
+
+.grid-item {
+background-color: #FEFEE3;
+border-radius: 50%;
+height: 200px;
+width: 200px;
+padding: 20px;
+font-size: 30px;
+text-align: center;
+
 }
