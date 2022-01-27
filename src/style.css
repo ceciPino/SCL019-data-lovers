@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Song+Myung&family=Yeseva+One&display=swap');
 
+* {
+box-sizing: border-box;
+}
+
+img {
+width: 350px;
+margin: 0 auto;
+position: absolute;
+height: auto;
+left: 0;
+right: 0;
+top: 30%;
+}
+
 body {
 background-color: beige;
 background-image: url(https://www.teahub.io/photos/full/62-626076_studio-ghibli-sky-background.jpg);
@@ -23,9 +37,6 @@ text-align: center;
 color: #CF2D25;
 margin-top: 400px;
 margin-bottom: 400px;
-
-
-
 }
 
 h2 {
@@ -34,7 +45,6 @@ font-family: 'Song Myung', serif;
 font-size: 40px;
 color: #DA352D;
 padding-left: 75px;
-
 }
 
 h3 {
@@ -55,11 +65,9 @@ color: #FFF3E2;
 }
 
 .audio {
-
 align-items: top right;
 justify-content: right;
 position: absolute; top: 10px; right: 10px;
-
 }
 
 .grid-container {
@@ -67,7 +75,7 @@ display: grid;
 grid-template-columns: auto auto auto;
 padding: 10px;
 justify-content: center;
-grid-column-gap: 300px;
+grid-column-gap: 200px;
 grid-row-gap: 100px;
 
 }
@@ -75,8 +83,8 @@ grid-row-gap: 100px;
 .grid-item {
 background-color: #FEFEE3;
 border-radius: 50%;
-height: 200px;
-width: 200px;
+height: 140px;
+width: 140px;
 padding: 20px;
 font-size: 30px;
 text-align: center;
@@ -91,24 +99,37 @@ cursor: default;
 
 .menu-content a {
 color: white;
-font-size: 30px;
+font-size: 27px;
 text-decoration: none;
 justify-content: normal;
 text-align: center;
-width: 15%;
-padding: 0.4rem;
+width: 200px;
+height: 60px;
+padding: 0.6rem;
 margin: 2rem 2rem 2rem;
-border-radius: 1.2rem 1.2rem 1.2rem 1.2rem;
+border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
 }
 
-#películas {
-background-color: #779ecb;
+#peliculas {
+background-color: #2d62a8;
+}
+
+#peliculas:hover {
+background-color: #84b6f4;
 }
 
 #personajes{
-background-color: #ff6565;
+background-color: #d9352c;
+}
+
+#personajes:hover {
+background-color: #ff6961;
 }
 
 #directores {
-background-color: #efe670;
+background-color: #f0bc67;
+}
+
+#directores:hover {
+background-color: #f7f791;
 }
