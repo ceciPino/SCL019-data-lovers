@@ -133,3 +133,9 @@ background-color: #f0bc67;
 #directores:hover {
 background-color: #f7f791;
 }
+
+.cartel {
+    display: inline-block;
+    width: 100px;
+    height: auto;
+}
