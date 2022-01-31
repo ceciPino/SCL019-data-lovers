@@ -7,7 +7,6 @@ box-sizing: border-box;
 img {
 width: 350px;
 margin: 0 auto;
-position: absolute;
 height: auto;
 left: 0;
 right: 0;
