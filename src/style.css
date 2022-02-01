@@ -2,15 +2,15 @@
 
 * {
 box-sizing: border-box;
+margin: 0;
+padding: 0;
 }
 
-img {
+.imgtotoro {
 width: 350px;
-margin: 0 auto;
-height: auto;
-left: 0;
-right: 0;
-top: 30%;
+display: block;
+margin: auto;
+margin-top: 200px;
 }
 
 body {
@@ -23,31 +23,27 @@ background-size: cover;
 background-color: #FEFEE3;
 align-items: center;
 cursor: pointer;
-
 }
 
 h1 {
-
 font-family: 'Yeseva One', serif;
 font-size: 100px;
 align-items: center;
 justify-content: center;
 text-align: center;
 color: #CF2D25;
-margin-top: 400px;
-margin-bottom: 400px;
+margin: auto;
+margin-bottom: 100px;
 }
 
-h2 {
-
+#menutitle {
 font-family: 'Song Myung', serif;
-font-size: 40px;
+font-size: 45px;
 color: #DA352D;
 padding-left: 75px;
 }
 
 h3 {
-
 font-family: 'Song Myung', serif;
 font-size: 20px;
 align-items: center;
@@ -57,26 +53,26 @@ color: #FFF3E2;
 }
 
 main {
-
 font-family: 'Song Myung', serif;
 font-size: 20px;
 color: #FFF3E2;
 }
 
-.audio {
+.audioghibli {
 align-items: top right;
 justify-content: right;
-position: absolute; top: 10px; right: 10px;
+position: absolute;
+top: 5px;
+right: 5px;
 }
 
-.grid-container {
+/* .grid-container {
 display: grid;
 grid-template-columns: auto auto auto;
 padding: 10px;
 justify-content: center;
 grid-column-gap: 200px;
 grid-row-gap: 100px;
-
 }
 
 .grid-item {
@@ -88,12 +84,14 @@ padding: 20px;
 font-size: 30px;
 text-align: center;
 
-}
+} */
 
 .menu-content {
 display: flex;
 flex-direction: column;
 cursor: default;
+position: fixed;
+top: 8rem;
 }
 
 .menu-content a {
@@ -107,6 +105,7 @@ height: 60px;
 padding: 0.6rem;
 margin: 2rem 2rem 2rem;
 border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+/* position: fixed; */
 }
 
 #peliculas {
@@ -133,8 +132,28 @@ background-color: #f0bc67;
 background-color: #f7f791;
 }
 
-.cartel {
-    display: inline-block;
-    width: 100px;
-    height: auto;
+img {
+width: 200px;
+height: 210px;
+/* width: 180px;
+height: auto; */
+border-radius: 200%;
+}
+
+#root {
+/* margin-left: 270px;
+margin-right: 270px;
+margin: auto;
+display: flex;
+flex-wrap: wrap;
+position: relative;
+grid-gap: 40px; */
+/* margin-bottom: 100px;
+margin-top: 30px; */
+
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-gap: 40px;
+margin-top: 50px;
+margin-left: 300px;
 }
