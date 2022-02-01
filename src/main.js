@@ -4,24 +4,47 @@ import data from './data/ghibli/ghibli.js';
 
 //TRAER DATA DE PELÍCULAS
 const dataghibli = data.films;
-console.log(dataghibli);
 const sectionAfiche = document.getElementById("root")
-
+// const containerPoster = document.getElementById("poster")
 const showFilms = (dataghibli) => {
+
 for(let i=0;i<dataghibli.length;i++){
-   //document.getElementById("afiche").innerHTML+=dataghibli[i].poster;
+
    let image = document.createElement("img");
-//    image.setAttribute("class", "cartel");
+   let divImagen = document.createElement("div");
+   let nombre = document.createElement("p")
+
+
    image.setAttribute("src", dataghibli[i].poster);
-   let divImagen = document.createElement("divimg");
-//    let flexbox1 = document.createElement("flexbox");
-    divImagen.appendChild(image);
-    sectionAfiche.appendChild(divImagen);
+   nombre.setAttribute("id", "titulo")
+   nombre.innerHTML = dataghibli[i].title;
+
+   divImagen.appendChild(image);
+   sectionAfiche.appendChild(divImagen);
+   divImagen.appendChild(nombre);
+//    containerPoster.appendChild(image);
+
+
+
 }
 };
 
 document.getElementById("peliculas").addEventListener('click', () => {
     showFilms(dataghibli)
+});
+
+for(let i=0;i<dataghibli.length;i++){
+
+    let directors = document.createElement("p");
+
+    directors.setAttribute("id", dataghibli[i].director);
+
+    console.log(directors)
+    
+
+}
+
+document.getElementById("directors").addEventListener('click', () => { showFilms(dataghibli)
 });
 
 
