@@ -37,7 +37,7 @@ margin-bottom: 100px;
 }
 
 #menutitle {
-font-family: 'Song Myung', serif;
+font-family: 'Yeseva One', serif;
 font-size: 45px;
 color: #DA352D;
 padding-left: 75px;
@@ -67,30 +67,11 @@ right: 5px;
 }
 
 #titulo {
-
-  font-size: 20px;
+font-size: 20px;
+font-family: 'Yeseva One', serif;
+color: #FFF3E2;
 
 }
-
-/* .grid-container {
-display: grid;
-grid-template-columns: auto auto auto;
-padding: 10px;
-justify-content: center;
-grid-column-gap: 200px;
-grid-row-gap: 100px;
-}
-
-.grid-item {
-background-color: #FEFEE3;
-border-radius: 50%;
-height: 140px;
-width: 140px;
-padding: 20px;
-font-size: 30px;
-text-align: center;
-
-} */
 
 .menu-content {
 display: flex;
