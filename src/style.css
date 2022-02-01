@@ -66,6 +66,12 @@ top: 5px;
 right: 5px;
 }
 
+#titulo {
+
+  font-size: 20px;
+
+}
+
 /* .grid-container {
 display: grid;
 grid-template-columns: auto auto auto;
