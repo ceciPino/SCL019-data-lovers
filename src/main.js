@@ -8,6 +8,8 @@ console.log(dataghibli);
 
 const sectionAfiche = document.getElementById("root")
 
+const showFilms = (dataghibli) => {
+
 for(let i=0;i<dataghibli.length;i++){
    //document.getElementById("afiche").innerHTML+=dataghibli[i].poster;
    let image = document.createElement("img");
@@ -18,9 +20,13 @@ for(let i=0;i<dataghibli.length;i++){
     
 
     divImagen.appendChild(image);
-    sectionAfiche.appendChild(divImagen);
-
-    
+    sectionAfiche.appendChild(divImagen);  
    
 }
+};
+
+document.getElementById("peliculas").addEventListener('click', () => {
+    showFilms(dataghibli)
+});
+
 
