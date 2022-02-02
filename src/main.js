@@ -15,14 +15,16 @@ for(let i=0;i<dataghibli.length;i++){
    let nombre = document.createElement("p")
 
 
-   image.setAttribute("src", dataghibli[i].poster);
-   nombre.setAttribute("id", "titulo");
+   image.setAttribute("src", dataghibli[i].poster, "class", "pelicula");
+   nombre.setAttribute("class", "titulo");
    
    nombre.innerHTML = dataghibli[i].title;
 
    divImagen.appendChild(image);
    sectionAfiche.appendChild(divImagen);
    divImagen.appendChild(nombre);
+
+   
 }
 };
 
@@ -39,17 +41,29 @@ for(let i=0;i<dataghibli.length;i++){
 
     sectionDirectores.appendChild(directors);
 
+    /*let directorsFilt = directors.filter((item,index)=> {
+        return directors.indexOf(item) === index;
+    })*/
+
 }
 };
 
 
 document.getElementById("peliculas").addEventListener('click', () => {
     showFilms(dataghibli)
+
 });
+
+//document.getElementsByClassName("pelicula")[0].style.display = "block";
+//document.getElementsByClassName("pelicula")[1].style.display = "none";
 
 document.getElementById("directores").addEventListener('click', () => { 
     showDirectors(dataghibli)
+    
 });
+
+
+
 
 
 
