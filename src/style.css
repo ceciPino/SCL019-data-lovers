@@ -53,7 +53,7 @@ color: #FFF3E2;
 }
 
 main {
-font-family: 'Song Myung', serif;
+font-family: 'Yeseva One', serif;
 font-size: 20px;
 color: #FFF3E2;
 }
@@ -71,6 +71,11 @@ font-size: 20px;
 font-family: 'Yeseva One', serif;
 color: #FFF3E2;
 
+}
+
+.directoris {
+font-family: 'Yeseva One', serif;
+color: #FFF3E2;
 }
 
 .menu-content {
@@ -122,8 +127,6 @@ background-color: #f7f791;
 img {
 width: 200px;
 height: 210px;
-/* width: 180px;
-height: auto; */
 border-radius: 200%;
 }
 
