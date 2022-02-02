@@ -2,10 +2,29 @@ import data from './data/ghibli/ghibli.js';
 
 // console.log(data);
 
-//TRAER DATA DE PELÍCULAS Y DIRECTORES
+//TRAER DATA DE PELÍCULAS, DIRECTORES Y PERSONAJES
 const dataghibli = data.films;
 const sectionAfiche = document.getElementById("root")
 const sectionDirectores = document.getElementById("root")
+const persContainer = document.getElementById("persContainer");
+
+const charImage = (characters, name) => {
+return` 
+<div>
+<h4 class="nombre-personaje">${name}</h4>
+<img src="${characters}">
+</div>`;
+
+};
+
+for (let i= 0; i <dataghibli.length; i++) {
+ let characters = dataghibli[i].people;
+  for (let j=0; j <characters.length; j++) {
+      persContainer.innerHTML += charImage(characters[j].img, characters[j].name);
+  }
+
+}
+
 const showFilms = (dataghibli) => {
 
 for(let i=0;i<dataghibli.length;i++){
