@@ -73,7 +73,7 @@ color: #FFF3E2;
 
 }
 
-#nombre-personaje {
+.nombre-personaje {
 font-family: 'Yeseva One', serif;
 color: #FFF3E2;
     
@@ -162,19 +162,26 @@ border-radius: 200%;
 }
 
 #root {
-/* margin-left: 270px;
-margin-right: 270px;
-margin: auto;
-display: flex;
-flex-wrap: wrap;
-position: relative;
-grid-gap: 40px; */
-/* margin-bottom: 100px;
-margin-top: 30px; */
-
 display: grid;
 grid-template-columns: repeat(4, 1fr);
 grid-gap: 40px;
 margin-top: 50px;
 margin-left: 300px;
+}
+
+#dirContainer {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-gap: 30px;
+margin-top: 50px;
+margin-left: 300px;   
+
+}
+
+#persContainer {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-gap: 30px;
+margin-top: 50px;
+margin-left: 300px;    
 }
