@@ -2,11 +2,13 @@ import data from './data/ghibli/ghibli.js';
 
 // console.log(data);
 
-//TRAER DATA DE PELÍCULAS, DIRECTORES Y PERSONAJES
+//Acceder a data de las peliculas
 const dataghibli = data.films;
+
+//
 const sectionAfiche = document.getElementById("root")
-const sectionDirectores = document.getElementById("root")
-const persContainer = document.getElementById("persContainer");
+// const sectionDirectores = document.getElementById("dirContainer")
+// const persContainer = document.getElementById("persContainer");
 
 const charImage = (characters, name) => {
 return` 
@@ -17,16 +19,19 @@ return`
 
 };
 
+const showCharacters = (dataghibli) => {
+sectionAfiche.innerHTML= ""
 for (let i= 0; i <dataghibli.length; i++) {
  let characters = dataghibli[i].people;
   for (let j=0; j <characters.length; j++) {
-      persContainer.innerHTML += charImage(characters[j].img, characters[j].name);
+      sectionAfiche.innerHTML += charImage(characters[j].img, characters[j].name);
   }
 
-}
+    }
+};
 
 const showFilms = (dataghibli) => {
-
+sectionAfiche.innerHTML= ""
 for(let i=0;i<dataghibli.length;i++){
 
    let image = document.createElement("img");
@@ -48,7 +53,7 @@ for(let i=0;i<dataghibli.length;i++){
 };
 
 const showDirectors = (dataghibli) => {
-
+sectionAfiche.innerHTML= ""
 for(let i=0;i<dataghibli.length;i++){
 
     let directors = document.createElement("p");
@@ -58,7 +63,7 @@ for(let i=0;i<dataghibli.length;i++){
 
     directors.innerHTML = dataghibli[i].director;
 
-    sectionDirectores.appendChild(directors);
+    sectionAfiche.appendChild(directors);
 
     /*let directorsFilt = directors.filter((item,index)=> {
         return directors.indexOf(item) === index;
@@ -67,6 +72,9 @@ for(let i=0;i<dataghibli.length;i++){
 }
 };
 
+document.getElementById("personajes").addEventListener('click', () => { 
+    showCharacters(dataghibli)
+});
 
 document.getElementById("peliculas").addEventListener('click', () => {
     showFilms(dataghibli)
