@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
     <title>Ghiblers</title>
     <link rel="stylesheet" href="style.css" />
     <div class="audioghibli">
@@ -11,18 +11,42 @@
   </head>
 
   <body>
-   <section id="sec-1">
-     <!-- <div class="container"> -->
-    <header>
-    <img class= "imgtotoro" src="images/totoro.png" style="max-width:100%;height:auto;">
-    <h1 style="font-size:5vw">Ghiblers</h1>
-    </header>
-    <a href="#sec-2">
-      <div class="scroll-down"></div>
-    </a>
-  <!-- </div> -->
-  </section>
+    <section id="sec-1">
+      <!-- <div class="container"> -->
+      <header>
+        <img
+          class="imgtotoro"
+          src="images/totoro.png"
+          style="max-width: 100%; height: auto"
+        />
+        <h1 style="font-size: 5vw">Ghiblers</h1>
+      </header>
+      <a href="#sec-2">
+        <div class="scroll-down"></div>
+      </a>
+      <!-- </div> -->
+    </section>
 
+    <!-- SECCIÓN FILTRADO Y ORDENADO -->
+    <div class="filterandsort-section" id="filterandsort-section" style="display: none">
+      <select id="filter-section">
+        <option selected disabled>Filter by directors</option>
+        <option value="directedByHayao">Hayao Miyazaki</option>
+        <option value="directedByGoro">Gorō Miyazaki</option>
+        <option value="directedByKondo">Yoshifumi Kondō</option>
+        <option value="directedByMorita">Hiroyuki Morita</option>
+        <option value="directedByTakahata">Isao Takahata</option>
+        <option value="directedByYonebayashi">Hiromasa Yonebayashi</option>
+      </select>
+
+      <select id="sort-section">
+        <option selected disabled>Sort by</option>
+        <option value="a-z">A-Z</option>
+        <option value="z-a">Z-A</option>
+      </select>
+      <input type="search" class= "searchFilm" name="" placeholder="&#128269 Search">
+    </div>
+    <!-- </section> -->
     <!-- <select name="ascydesc" id="ascydesc">
      <option value="">A-Z</option>
      <option value="">Z-A</option>
@@ -52,32 +76,32 @@
      <option value="">When Marnie Was There</option>
 
     </select> -->
+    <!-- 
+    SECCIÓN DE FILTRADO -->
 
     <section id="sec-2">
       <!-- <div id= "container"> -->
-    <main>
-      <nav>
-        <div class="menu-content">
-          <span id="menutitle">Menu</span>
-          <a href="#" id="peliculas">Movies</a>
-          <a href="#" id="personajes">Characters</a>
-          <a href="#" id="directores">Directors</a>
-        </div>
-      </nav>
-    </main>
+      <main>
+        <nav>
+          <div class="menu-content">
+            <span id="menutitle">Menu</span>
+            <a href="#sec-2" id="inicio">Home</a>
+            <a href="#sec-2" id="peliculas">Films</a>
+            <a href="#sec-2" id="personajes">Characters</a>
+            <a href="#sec-2" id="directores">Directors</a>
+          </div>
+        </nav>
+      </main>
 
-  <div id="root"></div>
+      <div id="root"></div>
+    </section>
 
-</section>
+    <footer>
+      <h3>Este es un proyecto creado por Amanda, Anabella y Ceci.</h3>
+    </footer>
 
-  <footer>
-  <h3>Este es un proyecto creado por Amanda, Anabella y Ceci.</h3>
-  </footer>
-  
-  <!-- </div> -->
-  
-  <script src="main.js" type="module"></script>
+    <!-- </div> -->
+
+    <script src="main.js" type="module"></script>
   </body>
 </html>
-
-
