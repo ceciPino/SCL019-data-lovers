@@ -9,20 +9,26 @@ const sectionAfiche = document.getElementById("root");
 // const sectionDirectores = document.getElementById("dirContainer")
 // const persContainer = document.getElementById("persContainer");
 
-// PERSONAJES
+// FUNCION PARA MOSTRAR PERSONAJES
 const charImage = (characters, name) => {
   return `
 <div>
-<h4 class="nombre-personaje">${name}</h4>
-<img src="${characters}">
+<img class="img-personaje" src="${characters}">
+<p class="nombre-personaje">${name}</p>
 </div>`;
 };
+
+
+
 
 const showCharacters = (dataghibli) => {
   sectionAfiche.innerHTML = "";
   for (let i = 0; i < dataghibli.length; i++) {
     let characters = dataghibli[i].people;
     for (let j = 0; j < characters.length; j++) {
+      // let imageCharacters= characters[j].img;
+      // imageCharacter.setAttribute('class')
+      // imageCharacters.setAttribute('class', 'imgCharacters');
       sectionAfiche.innerHTML += charImage(
         characters[j].img,
         characters[j].name
@@ -31,7 +37,7 @@ const showCharacters = (dataghibli) => {
   }
 };
 
-//UFNCION PARA MOSTRAR PELICULAS
+//FUNCION PARA MOSTRAR PELICULAS
 const showFilms = (dataghibli) => {
   sectionAfiche.innerHTML = "";
   sectionAfiche.style.display = "grid";
@@ -42,7 +48,7 @@ const showFilms = (dataghibli) => {
     let nombre = document.createElement("p");
 
     image.setAttribute("src", dataghibli[i].poster);
-    image.setAttribute("class", "imgfilm")
+    image.setAttribute("class", "imgfilm");
     divImagen.setAttribute("class", "divimagen");
     nombre.setAttribute("class", "titulo");
 
@@ -75,7 +81,9 @@ const showDirectors = (dataghibli) => {
 };
 
 // SECCIÓN FILTRAR
+//filtrar peliculas por directores
 const filterandsort = document.getElementsByClassName("filterandsort-section");
+const charactersSection = document.getElementsByClassName("characters-section");
 
 // EL evento change se  usa con elementos "section", "input" y "textarea", su estructura es la sgte:
 const filterSection = document.getElementById("filter-section"); // se declara la variable asociada al fitro y se agrega el evento a esa variable
@@ -83,8 +91,17 @@ filterSection.addEventListener("change", (e) => {
   let filterItem = e.currentTarget.value; //se llama a los valores de los elementos asociados al evento
   // console.log(filterItem)//
   let directorsByFilms = all.filterDirectors(filterItem, dataghibli); //se llaman a todos los elementos dentro de la función creada en data.js
-  showFilms(directorsByFilms); // se muestran las peliculas asociadas a los directores 
+  showFilms(directorsByFilms); // se muestran las peliculas asociadas a los directores
   sectionAfiche.style.display = "flex"; // se muestran las peliculas ordenadas en flex
+});
+
+//filtrar personajes por peliculas
+const characterFilter = document.getElementById("persByFilm");
+characterFilter.addEventListener("change", (e) => {
+  let filterCharacter = e.currentTarget.value;
+  let charactersByFilms = all.filterbyFilms(filterCharacter, dataghibli);
+  showCharacters(charactersByFilms);
+  sectionAfiche.style.display = "flex";
 });
 
 //SECCIÓN ORDENAR
@@ -93,20 +110,24 @@ filterSection.addEventListener("change", (e) => {
 document.getElementById("personajes").addEventListener("click", () => {
   showCharacters(dataghibli);
   filterandsort[0].style.display = "none";
+  charactersSection[0].style.display = "flex";
+  sectionAfiche.style.display = "grid";
 });
 
 document.getElementById("peliculas").addEventListener("click", () => {
   showFilms(dataghibli);
   filterandsort[0].style.display = "flex";
+  charactersSection[0].style.display = 'none';
 });
 
 document.getElementById("directores").addEventListener("click", () => {
   showDirectors(dataghibli);
   filterandsort[0].style.display = "none";
+  charactersSection[0].style.display = 'none';
 });
 
 document.getElementById("inicio").addEventListener("click", () => {
   sectionAfiche.innerHTML = "";
   filterandsort[0].style.display = "none";
+  charactersSection[0].style.display = 'none';
 });
-
