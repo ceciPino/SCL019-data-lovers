@@ -18,18 +18,20 @@ const charImage = (characters, name) => {
 </div>`;
 };
 
-const showCharacters = (dataghibli) => {
-  sectionAfiche.innerHTML = "";
-  for (let i = 0; i < dataghibli.length; i++) {
-    let characters = dataghibli[i].people;
-    for (let j = 0; j < characters.length; j++) {
-      sectionAfiche.innerHTML += charImage(
-        characters[j].img,
-        characters[j].name
-      );
+
+
+function showCharacters(dataghibli) {
+    sectionAfiche.innerHTML = "";
+    for (let i = 0; i < dataghibli.length; i++) {
+        let characters = dataghibli[i].people;
+        for (let j = 0; j < characters.length; j++) {
+            sectionAfiche.innerHTML += charImage(
+                characters[j].img,
+                characters[j].name
+            );
+        }
     }
-  }
-};
+}
 
 //UFNCION PARA MOSTRAR PELICULAS
 const showFilms = (dataghibli) => {
