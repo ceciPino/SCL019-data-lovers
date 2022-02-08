@@ -6,8 +6,6 @@ import data from "./data/ghibli/ghibli.js";
 const dataghibli = data.films;
 
 const sectionAfiche = document.getElementById("root");
-// const sectionDirectores = document.getElementById("dirContainer")
-// const persContainer = document.getElementById("persContainer");
 
 // PERSONAJES
 const charImage = (characters, name) => {
@@ -31,7 +29,7 @@ const showCharacters = (dataghibli) => {
   }
 };
 
-//UFNCION PARA MOSTRAR PELICULAS
+//FUNCION PARA MOSTRAR PELICULAS
 const showFilms = (dataghibli) => {
   sectionAfiche.innerHTML = "";
   sectionAfiche.style.display = "grid";
@@ -68,9 +66,6 @@ const showDirectors = (dataghibli) => {
 
     sectionAfiche.appendChild(directors);
 
-    /*let directorsFilt = directors.filter((item,index)=> {
-        return directors.indexOf(item) === index;
-    })*/
   }
 };
 
@@ -87,7 +82,31 @@ filterSection.addEventListener("change", (e) => {
   sectionAfiche.style.display = "flex"; // se muestran las peliculas ordenadas en flex
 });
 
-//SECCIÓN ORDENAR
+/*SECCIÓN ORDENAR
+let dropdownSort = document.getElementById("selectSort");
+dropdownSort.addEventListener('change', function () {
+    let valueSort = dropdownSort.value;
+        if (valueSort === "Newest") { // Ordena por año descendente
+            let infoSorted = sortDataYear(dataghibli);
+            clearPage();
+            mainPoster(infoSorted);
+        }
+        if (valueSort === "Oldest") { // Ordena por año ascendente
+            let OldestYear = sortOldest(dataghibli);
+            clearPage();
+            mainPoster(OldestYear);
+        }
+        if (valueSort === "A_Z") { // Ordena alfabéticamente de A a Z
+            let infoSort = sortAZ(dataghibli);
+            clearPage();
+            mainPoster(infoSort);
+        }
+        if (valueSort === "Z_A") { // Ordena alfabéticamente de Z a A
+            let infoSortR = sortZA(dataghibli);
+            clearPage();
+            mainPoster(infoSortR);
+        }
+});*/
 
 //BOTONES Y SUS EVENTOS
 document.getElementById("personajes").addEventListener("click", () => {

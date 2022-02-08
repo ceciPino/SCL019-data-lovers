@@ -45,6 +45,20 @@ export const filterDirectors = (filterItem, data) => { //filterItem se declara e
   }
 };
 
+ /* *****************FUNCION SORT************ 
 
+export const sortDataYear = (data) => {
+    const sortedYear = data.sort((a,b) => {
+        return b.release_date - a.release_date;
+    });
+return sortedYear;
+}
 
+export const sortOldest = (data) => {
+    const sortedOld = data.sort((a,b) => {
+        return a.release_date - b.release_date;
+    });
+return sortedOld;
+} 
+*/
 
