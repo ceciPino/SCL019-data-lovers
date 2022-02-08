@@ -310,7 +310,7 @@ main {
 
 #root {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;  
   justify-content: center;
   align-items: center;
@@ -356,6 +356,7 @@ main {
   /* margin: auto; */
   width: 400px;
   padding-bottom: 2rem;
+  text-align: center;
 
   /* padding-right: 3rem; */
 }
