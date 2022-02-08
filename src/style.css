@@ -286,10 +286,8 @@ main {
 
 #root {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 40px;
-  /* margin-top: 100px;
-  margin-left: 10px;  */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;  
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
