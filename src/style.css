@@ -7,14 +7,14 @@
   padding: 0;
 }
 
-.imgtotoro{
+.imgtotoro {
   width: 480px;
   display: block;
   margin: auto;
   margin-top: 150px;
 }
 
-/* @media (max-width: 800px) {
+@media (max-width: 800px) {
   .imgtotoro {
     width: 400px;
     height: auto;
@@ -27,7 +27,7 @@
       width: 300px;
       height: auto;
   }
-} */
+}
 
 body::-webkit-scrollbar {
   width: 22px;
@@ -166,23 +166,11 @@ main {
   font-family: 'Vollkorn', serif;
   color: #0f0f0e;
   text-align: center;
-  border-radius: 100px;
-  align-items: center;
-  background-color: rgb(255, 243, 226, 0.6);
-  padding: 5px;
-  margin: 10px;
 }
 
 .nombre-personaje {
-  font-size: 21px;
-  font-family: 'Vollkorn', serif;
-  color: #0f0f0e;
-  text-align: center;
-  border-radius: 100px;
-  align-items: center;
-  background-color: rgb(255, 243, 226, 0.6);
-  padding: 5px;
-  margin: 10px;
+  font-family: "Yeseva One", serif;
+  color: #fff3e2;
 }
 
 .directoris {
@@ -270,40 +258,16 @@ main {
 }
 
 .imgfilm {
-  display: block;
-  margin: auto;
   width: 210px;
-  height: 210px;
-  border: 2px solid #2a729ed5;
+  height: 220px;
   border-radius: 200%;
-  object-fit: cover;
   cursor: pointer;
 }
 
 
 .imgfilm:hover {
-  box-shadow: 10px 10px 15px -10px rgba(0, 0, 0, 0.616);
+  box-shadow: 15px 15px 15px -10px rgba(0, 0, 0, 0.616);
 }
-
-/* .img{
-  width: 480px;
-  display: block;
-  margin: auto;
-  margin-top: 150px;
-} */
-
-.img-personaje {
-  display: block;
-  margin: auto;
-  width: 210px;
-  height: 210px;
-  border: 2px solid #2a729ed5;
-  border-radius: 200%;
-  object-fit: cover;
-  cursor: pointer;
-  align-items: center;
-}
-
 
 /* @media(max-width:1022px) {
   .imgfilm {
@@ -320,14 +284,16 @@ main {
 
 #root {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;  
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 40px;
+  /* margin-top: 100px;
+  margin-left: 10px;  */
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   padding-left: 7rem;
   padding-right: 5rem;
-  margin: auto;
+  margin-bottom: 100px;
 
 }
 
@@ -370,8 +336,12 @@ main {
   /* padding-right: 3rem; */
 }
 
+.filterandsort-section select:hover {
+  box-shadow: 0 0 30px 0 rgba(73, 73, 73, 0.63);
+    transition: all 500ms ease;
+}
 
-#filter-section {
+select {
   width: 210px;
   max-width: 210px;
   height: 40px;
@@ -385,21 +355,6 @@ main {
   font-size: 1.3rem;
   padding-left: 5px;
 
-}
-
-#sort-section {
-  /* width: 210px;
-  max-width: 210px; */
-  height: 40px;
-  border-radius: 100px;
-  /* padding: 30px; */
-  text-align: center;
-  margin-left: 200px;
-  background-color: #fff3e2;
-  color: #333030;
-  font-family: 'Vollkorn', serif;
-  font-size: 1.3rem;
-  padding-left: 5px;
 }
 
 .searchFilm {
@@ -416,31 +371,4 @@ main {
   /* padding-left: 5px; */
   margin-right: 4rem;
 
-}
-
-.characters-section {
-  display: flex;
-  margin-left: 800px;
-  margin-right: 200px;
-  padding-top: 200px;
-  justify-content: space-around;
-  /* margin: auto; */
-  width: 400px;
-  padding-bottom: 2rem;
-}
-
-
-
-#persByFilm {
-  width: 330px;
-  max-width: 330px;
-  height: auto;
-  border-radius: 100px;
-  padding: 5px;
-  text-align: center;
-  margin-left: 200px;
-  background-color: #fff3e2;
-  color: #333030;
-  font-family: 'Vollkorn', serif;
-  font-size: 1.3rem;
 }
