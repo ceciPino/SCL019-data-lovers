@@ -168,7 +168,7 @@ main {
   text-align: center;
   border-radius: 100px;
   align-items: center;
-  background-color: rgb(255, 243, 226, 0.6);
+  /* background-color: rgb(255, 243, 226, 0.6); */
   padding: 5px;
   margin: 10px;
 }
@@ -180,7 +180,7 @@ main {
   text-align: center;
   border-radius: 100px;
   align-items: center;
-  background-color: rgb(255, 243, 226, 0.6);
+  /* background-color: rgb(255, 243, 226, 0.6); */
   padding: 5px;
   margin: 10px;
 }
@@ -191,16 +191,6 @@ main {
 }
 
 #persByFilm {
-  font-family: "Yeseva One", serif;
-  border-radius: 60px;
-  padding: 30px;
-  text-align: center;
-  margin-left: 500px;
-  background-color: #fff3e2;
-  color: #ff6961;
-}
-
-#ascydesc {
   font-family: "Yeseva One", serif;
   border-radius: 60px;
   padding: 30px;
@@ -282,7 +272,7 @@ main {
 
 
 .imgfilm:hover {
-  box-shadow: 10px 10px 15px -10px rgba(0, 0, 0, 0.616);
+  box-shadow: 10px 10px 15px -10px rgba(0, 0, 0, 0.2);
 }
 
 /* .img{
