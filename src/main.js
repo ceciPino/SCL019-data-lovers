@@ -98,31 +98,33 @@ characterFilter.addEventListener("change", (e) => {
 });
 
 
-/*SECCIÓN ORDENAR
+//SECCIÓN ORDENAR
+
 let dropdownSort = document.getElementById("selectSort");
 dropdownSort.addEventListener('change', function () {
     let valueSort = dropdownSort.value;
         if (valueSort === "Newest") { // Ordena por año descendente
-            let infoSorted = sortDataYear(dataghibli);
-            clearPage();
-            mainPoster(infoSorted);
+            let infoSorted = all.sortDataYear(dataghibli);
+            sectionAfiche.style.display="flex"
+            showFilms(infoSorted);
         }
         if (valueSort === "Oldest") { // Ordena por año ascendente
-            let OldestYear = sortOldest(dataghibli);
-            clearPage();
-            mainPoster(OldestYear);
+            let OldestYear = all.sortOldest(dataghibli);
+            sectionAfiche.style.display="flex"
+            showFilms(OldestYear);
         }
+
         if (valueSort === "A_Z") { // Ordena alfabéticamente de A a Z
-            let infoSort = sortAZ(dataghibli);
-            clearPage();
-            mainPoster(infoSort);
+            let infoSort = all.sortAZ(dataghibli);
+            sectionAfiche.style.display="flex"
+            showFilms(infoSort);
         }
         if (valueSort === "Z_A") { // Ordena alfabéticamente de Z a A
-            let infoSortR = sortZA(dataghibli);
-            clearPage();
-            mainPoster(infoSortR);
+            let infoSortR = all.sortZA(dataghibli);
+            sectionAfiche.style.display="flex"
+            showFilms(infoSortR);
         }
-});*/
+});
 
 
 //BOTONES Y SUS EVENTOS

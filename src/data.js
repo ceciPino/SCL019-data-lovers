@@ -170,12 +170,8 @@ export const filterbyFilms= (filterCharacter, data) => {
 
 
 
-//FUNCION PARA FILTRAR PERSONAJES POR PELICULAS
+//FUNCION  SORT PARA ORDENAR PERSONAJES
 
-
-
-
- /* *****************FUNCION SORT************ 
 export const sortDataYear = (data) => {
     const sortedYear = data.sort((a,b) => {
         return b.release_date - a.release_date;
@@ -189,4 +185,19 @@ export const sortOldest = (data) => {
     });
 return sortedOld;
 } 
-*/
+
+export const sortAZ = (data) => {
+  let sortedData=[];
+  sortedData = data.sort((a,b) => {
+      return a.title.localeCompare(b.title);
+  });
+  return sortedData;
+}
+
+export const sortZA = (data) => {
+  let sortedRev=[];
+  sortedRev = data.sort((a,b) => {
+      return b.title.localeCompare(a.title);
+  });
+  return sortedRev;
+}
