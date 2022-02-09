@@ -14,21 +14,6 @@
   margin-top: 150px;
 }
 
-/* @media (max-width: 800px) {
-  .imgtotoro {
-    width: 400px;
-    height: auto;
-
-  }
-}
-
-@media (max-width: 550px) {
-  .imgtotoro {
-      width: 300px;
-      height: auto;
-  }
-} */
-
 body::-webkit-scrollbar {
   width: 22px;
   background: #aed3e4;
@@ -163,8 +148,8 @@ main {
 
 .titulo {
   font-size: 21px;
-  font-family: 'Vollkorn', serif;
-  color: #0f0f0e;
+  font-family: 'Yeseva One', serif;
+  color: #fff3e2;
   text-align: center;
   border-radius: 100px;
   align-items: center;
@@ -175,8 +160,8 @@ main {
 
 .nombre-personaje {
   font-size: 21px;
-  font-family: 'Vollkorn', serif;
-  color: #0f0f0e;
+  font-family: 'Yeseva One', serif;
+  color: #fff3e2;
   text-align: center;
   border-radius: 100px;
   align-items: center;
@@ -275,12 +260,6 @@ main {
   box-shadow: 10px 10px 15px -10px rgba(0, 0, 0, 0.2);
 }
 
-/* .img{
-  width: 480px;
-  display: block;
-  margin: auto;
-  margin-top: 150px;
-} */
 
 .img-personaje {
   display: block;
@@ -295,19 +274,6 @@ main {
 }
 
 
-/* @media(max-width:1022px) {
-  .imgfilm {
-      width: 170px;
-      height: 180px;
-  }
-}
-
-@media(max-width:905px) {
-  .imgfilm {
-      width: 140px;
-      height: 150px;
-  } */
-
 #root {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -321,30 +287,6 @@ main {
 
 }
 
-
-/* @media(max-width:890px) {
-  #root {
-      width: 800px;
-  }
-}
-
-@media(max-width:790px) {
-  #root {
-      width: 600px;
-  }
-}
-
-@media(max-width:690px) {
-  #root {
-      width: 400px;
-  }
-}
-
-@media(max-width:460px) {
-  #root {
-      width: 300px;
-  }
-} */
 
 .filterandsort-section {
   /* flex-wrap: wrap;  */
@@ -371,8 +313,8 @@ main {
   text-align: center;
   margin-left: 200px;
   background-color: #fff3e2;
-  color: #333030;
-  font-family: 'Vollkorn', serif;
+  color: #ff6961;
+  font-family: 'Yeseva One', serif;
   font-size: 1.3rem;
   padding-left: 5px;
 
@@ -387,8 +329,8 @@ main {
   text-align: center;
   margin-left: 200px;
   background-color: #fff3e2;
-  color: #333030;
-  font-family: 'Vollkorn', serif;
+  color: #ff6961;
+  font-family: 'Yeseva One', serif;
   font-size: 1.3rem;
   padding-left: 5px;
 }
@@ -401,8 +343,8 @@ main {
   text-align: center;
   margin-left: 200px;
   background-color: #fff3e2;
-  color: #333030;
-  font-family: 'Vollkorn', serif;
+  color: #ff6961;
+  font-family: 'Yeseva One', serif;
   font-size: 1.3rem;
   /* padding-left: 5px; */
   margin-right: 4rem;
@@ -431,7 +373,7 @@ main {
   text-align: center;
   margin-left: 200px;
   background-color: #fff3e2;
-  color: #333030;
-  font-family: 'Vollkorn', serif;
+  color: #ff6961;
+  font-family: 'Yeseva One', serif;
   font-size: 1.3rem;
 }

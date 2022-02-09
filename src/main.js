@@ -17,7 +17,6 @@ const charImage = (characters, name) => {
 };
 
 
-
 const showCharacters = (dataghibli) => {
   sectionAfiche.innerHTML = "";
   for (let i = 0; i < dataghibli.length; i++) {
