@@ -1,11 +1,13 @@
 // import { filterDirectors } from './data.js';
 import * as all from "./data.js";
 import data from "./data/ghibli/ghibli.js";
+import modalBox from "./modal.js";
 
 //Acceder a data de las peliculas
 const dataghibli = data.films;
 
 const sectionAfiche = document.getElementById("root");
+
 
 // FUNCION PARA MOSTRAR PERSONAJES
 const charImage = (characters, name) => {
@@ -46,6 +48,9 @@ const showFilms = (dataghibli) => {
     nombre.setAttribute("class", "titulo");
 
     nombre.innerHTML = dataghibli[i].title;
+    divImagen.addEventListener("click", () => {
+     modalBox()
+    });
 
     divImagen.appendChild(image);
     sectionAfiche.appendChild(divImagen);
@@ -55,6 +60,9 @@ const showFilms = (dataghibli) => {
 };
 
 //FUNCION PARA MOSTRAR DIRECTORES
+
+  const sectionDirectores = (dataghibli) => {
+    sectionAfiche.innerHTML = "";
 
     let showDirectors = new Set();
     for (let i = 0; i < dataghibli.length; i++) {
@@ -73,6 +81,7 @@ const showFilms = (dataghibli) => {
 
     sectionAfiche.appendChild(directors);
   }
+}
 
   
 
@@ -100,11 +109,11 @@ characterFilter.addEventListener("change", (e) => {
 
 
 //SECCIÓN ORDENAR
-let dropdownSort = document.getElementById("selectSort");
-dropdownSort.addEventListener('change', function () {
-    let valueSort = dropdownSort.value;
+let sortedPelis = document.getElementById("selectSort");
+sortedPelis.addEventListener('change', function () {
+    let valueSort = sortedPelis.value;
         if (valueSort === "Newest") { // Ordena por año descendente
-            let infoSorted = all.sortDataYear(dataghibli);
+            let infoSorted = all.sortNewest(dataghibli);
             sectionAfiche.style.display="flex"
             showFilms(infoSorted);
         }
@@ -142,7 +151,7 @@ document.getElementById("peliculas").addEventListener("click", () => {
 });
 
 document.getElementById("directores").addEventListener("click", () => {
-  showDirectors(dataghibli);
+  sectionDirectores(dataghibli);
   filterandsort[0].style.display = "none";
   charactersSection[0].style.display = 'none';
 });
