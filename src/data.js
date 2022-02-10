@@ -172,7 +172,7 @@ export const filterbyFilms= (filterCharacter, data) => {
 
 //FUNCION  SORT PARA ORDENAR PERSONAJES
 
-export const sortDataYear = (data) => {
+export const sortNewest = (data) => {
     const sortedYear = data.sort((a,b) => {
         return b.release_date - a.release_date;
     });
