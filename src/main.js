@@ -16,15 +16,12 @@ const charImage = (characters, name) => {
 </div>`;
 };
 
-
 const showCharacters = (dataghibli) => {
   sectionAfiche.innerHTML = "";
   for (let i = 0; i < dataghibli.length; i++) {
     let characters = dataghibli[i].people;
     for (let j = 0; j < characters.length; j++) {
-      // let imageCharacters= characters[j].img;
-      // imageCharacter.setAttribute('class')
-      // imageCharacters.setAttribute('class', 'imgCharacters');
+    
       sectionAfiche.innerHTML += charImage(
         characters[j].img,
         characters[j].name
@@ -58,26 +55,31 @@ const showFilms = (dataghibli) => {
 };
 
 //FUNCION PARA MOSTRAR DIRECTORES
-const showDirectors = (dataghibli) => {
-  sectionAfiche.innerHTML = "";
-  for (let i = 0; i < dataghibli.length; i++) {
-    let directors = document.createElement("p");
 
-    directors.setAttribute("id", dataghibli[i].director);
+    let showDirectors = new Set();
+    for (let i = 0; i < dataghibli.length; i++) {
+    let pelis = dataghibli[i];
+    showDirectors.add(pelis.director);
+    }
+
+    let arrayDirectoris = Array.from(showDirectors); // convirtiendo set en array
+    for (let i = 0; i < arrayDirectoris.length; i++){
+
+    let directors = document.createElement("p");
+    directors.setAttribute("id", arrayDirectoris[i]);
     directors.setAttribute("class", "directoris");
 
-    directors.innerHTML = dataghibli[i].director;
+    directors.innerHTML = arrayDirectoris[i];
 
     sectionAfiche.appendChild(directors);
-
   }
-};
+
+  
 
 // SECCIÓN FILTRAR
 //filtrar peliculas por directores
 const filterandsort = document.getElementsByClassName("filterandsort-section");
 const charactersSection = document.getElementsByClassName("characters-section");
-
 // EL evento change se  usa con elementos "section", "input" y "textarea", su estructura es la sgte:
 const filterSection = document.getElementById("filter-section"); // se declara la variable asociada al fitro y se agrega el evento a esa variable
 filterSection.addEventListener("change", (e) => {
@@ -87,7 +89,6 @@ filterSection.addEventListener("change", (e) => {
   showFilms(directorsByFilms); // se muestran las peliculas asociadas a los directores
   sectionAfiche.style.display = "flex"; // se muestran las peliculas ordenadas en flex
 });
-
 //filtrar personajes por peliculas
 const characterFilter = document.getElementById("persByFilm");
 characterFilter.addEventListener("change", (e) => {
@@ -99,7 +100,6 @@ characterFilter.addEventListener("change", (e) => {
 
 
 //SECCIÓN ORDENAR
-
 let dropdownSort = document.getElementById("selectSort");
 dropdownSort.addEventListener('change', function () {
     let valueSort = dropdownSort.value;
