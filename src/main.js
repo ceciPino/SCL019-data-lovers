@@ -80,8 +80,38 @@ const showFilms = (dataghibli) => {
     directors.innerHTML = arrayDirectoris[i];
 
     sectionAfiche.appendChild(directors);
+
+    //FOTOS DIRECTORES
+
+    let hayaoMiyazaki = document.getElementById("Hayao Miyazaki");
+    hayaoMiyazaki.setAttribute('src', 'src/hayaomiyasakici.JPEG');
+
+    
+    
+
+
+
+    // hayaoMiyazaki.setAttribute('src', 'hayaomiyasakici.JPEG');
+    // sectionAfiche.appendChild(hayaoMiyazaki);
+    // hayaoMiyazaki = document.createElement('img');
+    // hayaoMiyazaki.src = 'hayaomiyasakici.JPEG';
+    
+   
+
+    // let isaoTakahata = document.getElementById("Isao Takahata");
+    // isaoTakahata.setAttribute('img', 'src/isao takahata.PNG');
+    // let yoshifumiKondo = document.getElementById("Yoshifumi Kondō");
+    // yoshifumiKondo.setAttribute('img', 'src/tomomi mochizuki.JPEG');
+    // let hiroyukiMorita = document.getElementById("Hiroyuki Morita");
+    // hiroyukiMorita.setAttribute('img', 'src/hiroyuki morita.JPEG');
+    // let goroMiyazaki = document.getElementById("Gorō Miyazaki");
+    // goroMiyazaki.setAttribute('img', 'src/goro miyasaki.JPEG');
+    // let hiromasaYonebayashi = document.getElementById("Hiromasa Yonebayashi");
+    // hiromasaYonebayashi.setAttribute('img', 'src/hiromasa yonebayashi.PNG');
+
   }
-}
+
+  }
 
   
 
