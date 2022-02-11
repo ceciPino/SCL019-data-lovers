@@ -5,8 +5,17 @@ import modalBox from "./modal.js";
 
 //Acceder a data de las peliculas
 const dataghibli = data.films;
-
 const sectionAfiche = document.getElementById("root");
+
+// //HOME
+// const casita = document.getElementById("sec-2");
+// sectionAfiche.innerHTML = "";
+
+// let sinCara = document.createElement("img");
+// sinCara.setAttribute("src", '/icono ghibli.png');
+// sinCara.setAttribute("class", "foto2");
+// sectionAfiche.appendChild(sinCara);
+
 
 
 // FUNCION PARA MOSTRAR PERSONAJES
@@ -36,7 +45,7 @@ const showCharacters = (dataghibli) => {
 const showFilms = (dataghibli) => {
   sectionAfiche.innerHTML = "";
   sectionAfiche.style.display = "grid";
-  // document.getElementById('filter-section').style.display='block';
+
   for (let i = 0; i < dataghibli.length; i++) {
     let image = document.createElement("img");
     let divImagen = document.createElement("div");
@@ -55,7 +64,7 @@ const showFilms = (dataghibli) => {
     divImagen.appendChild(image);
     sectionAfiche.appendChild(divImagen);
     divImagen.appendChild(nombre);
-    //    sectionAfiche.appendChild(filterandsort);
+
   }
 };
 
@@ -81,39 +90,49 @@ const showFilms = (dataghibli) => {
 
     sectionAfiche.appendChild(directors);
 
-    //FOTOS DIRECTORES
+  }
 
-    let hayaoMiyazaki = document.getElementById("Hayao Miyazaki");
-    hayaoMiyazaki.setAttribute('src', 'src/hayaomiyasakici.JPEG');
+  //FOTOS DIRECTORES
 
-    
-    
+  let hayaoMiyazaki = document.getElementById("Hayao Miyazaki");
+  let hayaoFoto = document.createElement("img");
+  hayaoFoto.setAttribute("src", '/hayaomiyasakici.JPEG');
+  hayaoFoto.setAttribute("class", "foto1");
+  hayaoMiyazaki.appendChild(hayaoFoto);
 
+  let isaoTakahata = document.getElementById("Isao Takahata");
+  let isaoFoto = document.createElement("img");
+  isaoFoto.setAttribute("src", '/isao takahata.PNG');
+  isaoFoto.setAttribute("class", "foto1");
+  isaoTakahata.appendChild(isaoFoto);
 
+  let yoshifumiKondo = document.getElementById("Yoshifumi Kondō")
+  let yoshifumiFoto = document.createElement("img");
+  yoshifumiFoto.setAttribute("src", '/a yoshifumi kondo.jpeg');
+  yoshifumiFoto.setAttribute("class", "foto1");
+  yoshifumiKondo.appendChild(yoshifumiFoto);
 
-    // hayaoMiyazaki.setAttribute('src', 'hayaomiyasakici.JPEG');
-    // sectionAfiche.appendChild(hayaoMiyazaki);
-    // hayaoMiyazaki = document.createElement('img');
-    // hayaoMiyazaki.src = 'hayaomiyasakici.JPEG';
-    
-   
+  let hiroyukiMorita = document.getElementById("Hiroyuki Morita")
+  let hiroyukiFoto = document.createElement("img");
+  hiroyukiFoto.setAttribute("src", '/hiroyuki morita.JPEG');
+  hiroyukiFoto.setAttribute("class", "foto1");
+  hiroyukiMorita.appendChild(hiroyukiFoto);
 
-    // let isaoTakahata = document.getElementById("Isao Takahata");
-    // isaoTakahata.setAttribute('img', 'src/isao takahata.PNG');
-    // let yoshifumiKondo = document.getElementById("Yoshifumi Kondō");
-    // yoshifumiKondo.setAttribute('img', 'src/tomomi mochizuki.JPEG');
-    // let hiroyukiMorita = document.getElementById("Hiroyuki Morita");
-    // hiroyukiMorita.setAttribute('img', 'src/hiroyuki morita.JPEG');
-    // let goroMiyazaki = document.getElementById("Gorō Miyazaki");
-    // goroMiyazaki.setAttribute('img', 'src/goro miyasaki.JPEG');
-    // let hiromasaYonebayashi = document.getElementById("Hiromasa Yonebayashi");
-    // hiromasaYonebayashi.setAttribute('img', 'src/hiromasa yonebayashi.PNG');
+  let goroMiyazaki = document.getElementById("Gorō Miyazaki")
+  let goroFoto = document.createElement("img");
+  goroFoto.setAttribute("src", '/goro miyasaki.JPEG');
+  goroFoto.setAttribute("class", "foto1");
+  goroMiyazaki.appendChild(goroFoto);
+
+  let hiromasaYonebayashi = document.getElementById("Hiromasa Yonebayashi")
+  let hiromasaFoto = document.createElement("img");
+  hiromasaFoto.setAttribute("src", '/hiromasa yonebayashi.PNG');
+  hiromasaFoto.setAttribute("class", "foto1");
+  hiromasaYonebayashi.appendChild(hiromasaFoto);
+
 
   }
 
-  }
-
-  
 
 // SECCIÓN FILTRAR
 //filtrar peliculas por directores
@@ -187,7 +206,11 @@ document.getElementById("directores").addEventListener("click", () => {
 });
 
 document.getElementById("inicio").addEventListener("click", () => {
-  sectionAfiche.innerHTML = "";
+  sectionAfiche.innerHTML= "";
   filterandsort[0].style.display = "none";
   charactersSection[0].style.display = 'none';
+
 });
+
+
+
