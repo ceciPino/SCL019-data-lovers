@@ -7,15 +7,14 @@ import modalBox from "./modal.js";
 const dataghibli = data.films;
 const sectionAfiche = document.getElementById("root");
 
-// //HOME
-// const casita = document.getElementById("sec-2");
+//HOME
+// const casita = document.getElementsByClassName("sec-2");
 // sectionAfiche.innerHTML = "";
 
 // let sinCara = document.createElement("img");
 // sinCara.setAttribute("src", '/icono ghibli.png');
 // sinCara.setAttribute("class", "foto2");
 // sectionAfiche.appendChild(sinCara);
-
 
 
 // FUNCION PARA MOSTRAR PERSONAJES
