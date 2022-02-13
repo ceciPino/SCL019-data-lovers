@@ -36,6 +36,14 @@ section {
   justify-content: center;
 }
 
+#sec-1 {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 50px; 
+  display: flex;
+}
+
 #sec-2 {
   justify-content: space-around;
   align-items: normal;
@@ -418,133 +426,61 @@ color: #fff3e2;
     margin: 0;
     padding: 0;
   }
-  
-  .imgtotoro{
-    width: 380px;
-    display: block;
-    margin: auto;
-    margin-top: 150px;
+
+  header {
+   justify-content: center;
+   align-items: center;
   }
   
-  section {
+  .imgtotoro {
+    width: 300px;
+   justify-content: center;
+   align-items: center;
+  } 
+  
+  section { 
     min-height: 100vh;
-    width: 100%;
+    width: 10em;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+  } 
+
+  #sec-1 {
+    justify-content: center;
+    width: 10em;
   }
   
   #sec-2 {
-    justify-content: space-around;
-    align-items: normal;
-    margin:auto;
-    padding: 50px; 
-    display: flex;
-  }
-  
-  .scroll-down {
-    height: 50px;
-    width: 30px;
-    border: 2px solid black;
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
-    border-radius: 50px;
-    cursor: pointer;
-    
-  }
-  
-  .scroll-down::before,
-  .scroll-down::after {
-    content: "";
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    height: 10px;
-    width: 10px;
-    transform: translate(-50%, -100%) rotate(45deg);
-    border: 2px solid black;
-    border-top: transparent;
-    border-left: transparent;
-    animation: scroll-down 1s ease-in-out infinite;
-  }
-  
-  .scroll-down::before {
-    top: 30%;
-    animation-delay: 0.3s;
-  }
-  
-  @keyframes scroll-down {
-    0% {
-      opacity: 0;
-    }
-    30% {
-      opacity: 1;
-    }
-    60% {
-      opacity: 1;
-    }
-    100% {
-      top: 90%;
-      opacity: 0;
-    }
-  }
-  
-  body {
-    background-color: beige;
-    background-image: url(https://www.teahub.io/photos/full/62-626076_studio-ghibli-sky-background.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #fefee3;
-    align-items: center;
-    cursor: default;
+    justify-content: center;
+    width: 10em;
   }
   
   h1 {
-    font-family: "Yeseva One", serif;
-    font-size: 100px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #cf2d25;
-    margin: auto;
-    margin-bottom: 100px;
+  font-size: 50px;
+  align-items: center;
+  justify-content: center;
   }
   
   #menutitle {
     font-family: "Yeseva One", serif;
-    font-size: 45px;
+    font-size: 20px;
     color: #da352d;
     padding-left: 75px;
+    /* width: 30em; */
   }
   
   h3 {
     font-family: "Song Myung", serif;
-    font-size: 20px;
+    font-size: 10px;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: #fff3e2;
   }
   
-  main {
-    font-family: "Yeseva One", serif;
-    font-size: 20px;
-    color: #fff3e2;
-  }
-  
-  .audioghibli {
-    align-items: top right;
-    justify-content: right;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-  }
-  
   .titulo {
-    font-size: 21px;
+    font-size: 10px;
     font-family: 'Yeseva One', serif;
     color: #fff3e2;
     text-align: center;
@@ -555,7 +491,7 @@ color: #fff3e2;
   }
   
   .nombre-personaje {
-    font-size: 21px;
+    font-size: 10px;
     font-family: 'Yeseva One', serif;
     color: #fff3e2;
     text-align: center;
@@ -565,18 +501,18 @@ color: #fff3e2;
     margin: 10px;
   }
   
-  .directoris {
+  /* .directoris {
     font-family: "Yeseva One", serif;
     color: #fff3e2;
     text-align: center;
-  }
+  } */
   
   #persByFilm {
     font-family: "Yeseva One", serif;
     border-radius: 60px;
     padding: 30px;
     text-align: center;
-    margin-left: 500px;
+    margin-left: 10px;
     background-color: #fff3e2;
     color: #ff6961;
   }
@@ -586,60 +522,25 @@ color: #fff3e2;
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    padding-top: 100px;
   }
   
   .menu-content a {
     color: #ff6961;
-    font-size: 27px;
+    font-size: 15px;
     text-decoration: none;
-    justify-content: normal;
+    justify-content: center;
     text-align: center;
-    width: 200px;
-    height: 60px;
+    width: 100px;
+    height: 30px;
     padding: 0.6rem;
     margin: 2rem 2rem 2rem;
     border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
   }
   
-  #peliculas {
-    background-color: #fff3e2;
-  }
-  
-  #peliculas:hover {
-    background-color: #a8d5e2;
-  }
-  
-  #personajes {
-    background-color: #fff3e2;
-  }
-  
-  #personajes:hover {
-    background-color: #88d498;
-  }
-  
-  #directores {
-    background-color: #fff3e2;
-  }
-  
-  #directores:hover {
-    background-color: #f7f791;
-  }
-  
-  #inicio {
-    background-color: #fff3e2;
-  }
-  
-  #inicio:hover {
-    background-color: #d4b5cb;
-  
-  }
   
   .imgfilm {
-    display: block;
-    margin: auto;
-    width: 210px;
-    height: 210px;
+    width: 100px;
+    height: 100px;
     border: 2px solid #2a729ed5;
     border-radius: 200%;
     object-fit: cover;
@@ -680,13 +581,7 @@ color: #fff3e2;
   font-family: 'Yeseva One', serif;
   color: #fff3e2;
   
-  }
-  
-  
-  .imgfilm:hover {
-    box-shadow: 10px 10px 15px -10px rgba(0, 0, 0, 0.2);
-  }
-  
+  }  
   
   .img-personaje {
     display: block;
@@ -717,11 +612,11 @@ color: #fff3e2;
   
   .filterandsort-section {
     display: flex;
-    margin-left: 800px;
-    margin-right: 200px;
-    padding-top: 200px;
+    margin-left: 100px;
+    margin-right: 50px;
+    padding-top: 50px;
     justify-content: space-around;
-    width: 400px;
+    width: 100px;
     padding-bottom: 2rem;
     text-align: center;
   }
@@ -737,7 +632,7 @@ color: #fff3e2;
     background-color: #fff3e2;
     color: #ff6961;
     font-family: 'Yeseva One', serif;
-    font-size: 1.3rem;
+    font-size: 20px;
     padding-left: 5px;
   
   }
