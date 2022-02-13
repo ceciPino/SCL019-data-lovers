@@ -95,37 +95,37 @@ const showFilms = (dataghibli) => {
 
   let hayaoMiyazaki = document.getElementById("Hayao Miyazaki");
   let hayaoFoto = document.createElement("img");
-  hayaoFoto.setAttribute("src", '/hayaomiyasakici.JPEG');
+  hayaoFoto.setAttribute("src", 'hayaomiyasakici.JPEG');
   hayaoFoto.setAttribute("class", "foto1");
   hayaoMiyazaki.appendChild(hayaoFoto);
 
   let isaoTakahata = document.getElementById("Isao Takahata");
   let isaoFoto = document.createElement("img");
-  isaoFoto.setAttribute("src", '/isao takahata.PNG');
+  isaoFoto.setAttribute("src", 'isao takahata.PNG');
   isaoFoto.setAttribute("class", "foto1");
   isaoTakahata.appendChild(isaoFoto);
 
   let yoshifumiKondo = document.getElementById("Yoshifumi Kondō")
   let yoshifumiFoto = document.createElement("img");
-  yoshifumiFoto.setAttribute("src", '/a yoshifumi kondo.jpeg');
+  yoshifumiFoto.setAttribute("src", 'a yoshifumi kondo.jpeg');
   yoshifumiFoto.setAttribute("class", "foto1");
   yoshifumiKondo.appendChild(yoshifumiFoto);
 
   let hiroyukiMorita = document.getElementById("Hiroyuki Morita")
   let hiroyukiFoto = document.createElement("img");
-  hiroyukiFoto.setAttribute("src", '/hiroyuki morita.JPEG');
+  hiroyukiFoto.setAttribute("src", 'hiroyuki morita.JPEG');
   hiroyukiFoto.setAttribute("class", "foto1");
   hiroyukiMorita.appendChild(hiroyukiFoto);
 
   let goroMiyazaki = document.getElementById("Gorō Miyazaki")
   let goroFoto = document.createElement("img");
-  goroFoto.setAttribute("src", '/goro miyasaki.JPEG');
+  goroFoto.setAttribute("src", 'goro miyasaki.JPEG');
   goroFoto.setAttribute("class", "foto1");
   goroMiyazaki.appendChild(goroFoto);
 
   let hiromasaYonebayashi = document.getElementById("Hiromasa Yonebayashi")
   let hiromasaFoto = document.createElement("img");
-  hiromasaFoto.setAttribute("src", '/hiromasa yonebayashi.PNG');
+  hiromasaFoto.setAttribute("src", 'hiromasa yonebayashi.PNG');
   hiromasaFoto.setAttribute("class", "foto1");
   hiromasaYonebayashi.appendChild(hiromasaFoto);
 

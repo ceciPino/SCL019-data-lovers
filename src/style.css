@@ -7,6 +7,12 @@
   padding: 0;
 }
 
+header {
+  width:100%;
+  height: auto;
+  position: relative;
+}
+
 .imgtotoro{
   width: 480px;
   display: block;
@@ -36,20 +42,13 @@ section {
   justify-content: center;
 }
 
-#sec-1 {
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  padding: 50px; 
-  display: flex;
-}
-
 #sec-2 {
   justify-content: space-around;
   align-items: normal;
   margin:auto;
   padding: 50px; 
   display: flex;
+  /* width: fit-content; */
 }
 
 .scroll-down {
@@ -148,9 +147,9 @@ main {
 .audioghibli {
   align-items: top right;
   justify-content: right;
-  position: absolute;
-  top: 5px;
-  right: 5px;
+  position: relative;
+  top: 10px;
+  right: 10px;
 }
 
 .titulo {
@@ -259,14 +258,14 @@ main {
 
 .foto1 {
  
-    display: block;
-    margin: auto;
-    width: 210px;
-    height: 210px;
-    border: 2px solid #2a729ed5;
-    border-radius: 200%;
-    object-fit: cover;
-    cursor: pointer;
+  display: block;
+  margin: auto;
+  width: 210px;
+  height: 210px;
+  border: 2px solid #2a729ed5;
+  border-radius: 200%;
+  object-fit: cover;
+  cursor: pointer;
 }
 
 .foto2 {
@@ -327,8 +326,9 @@ color: #fff3e2;
 
 .filterandsort-section {
   display: flex;
-  margin-left: 800px;
-  margin-right: 200px;
+  margin: auto;
+  /* margin-left: 800px;
+  margin-right: 200px; */
   padding-top: 200px;
   justify-content: space-around;
   width: 400px;
@@ -338,6 +338,7 @@ color: #fff3e2;
 
 
 #filter-section {
+  
   width: 210px;
   max-width: 210px;
   height: 40px;
@@ -381,8 +382,10 @@ color: #fff3e2;
 
 .characters-section {
   display: flex;
-  margin-left: 800px;
-  margin-right: 200px;
+  flex-wrap: wrap;
+  margin: auto;
+  /* margin-left: 800px;
+  margin-right: 200px; */
   padding-top: 200px;
   justify-content: space-around;
   width: 400px;
@@ -419,68 +422,332 @@ color: #fff3e2;
 
 /* RESPONSIVE */
 
-@media screen and (max-width:768px) {
-
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  header {
-   justify-content: center;
-   align-items: center;
-  }
+@media screen and (max-width:820px) {
   
-  .imgtotoro {
-    width: 300px;
-   justify-content: center;
-   align-items: center;
-  } 
-  
-  section { 
-    min-height: 100vh;
-    width: 10em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } 
-
-  #sec-1 {
-    justify-content: center;
-    width: 10em;
-  }
-  
-  #sec-2 {
-    justify-content: center;
-    width: 10em;
+  .imgtotoro{
+    width: 380px;
+    display: block;
+    margin: auto;
+    margin-top: 150px;
   }
   
   h1 {
-  font-size: 50px;
+    font-size: 60px;
+  }
+  section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #sec-1 {
+    display: flex;
+    margin: auto;
+    align-items: center;
+
+  }
+
+  #sec-2 {
+    justify-content: space-around;
+    align-items: normal;
+    margin:auto;
+    padding: 50px; 
+    display: flex;
+  }
+  
+  .scroll-down {
+    height: 50px;
+    width: 30px;
+    border: 2px solid black;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    
+  }
+  
+  .scroll-down::before,
+  .scroll-down::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border: 2px solid black;
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+  }
+  
+  .scroll-down::before {
+    top: 30%;
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes scroll-down {
+    0% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    100% {
+      top: 90%;
+      opacity: 0;
+    }
+  }
+
+ 
+  .titulo {
+    font-size: 21px;
+  
+  }
+  
+  .nombre-personaje {
+    font-size: 21px;
+
+  }
+  
+
+  
+  #persByFilm {
+    font-family: "Yeseva One", serif;
+    border-radius: 60px;
+    padding: 30px;
+    text-align: center;
+    margin-left: 500px;
+    background-color: #fff3e2;
+    color: #ff6961;
+  }
+  
+  
+  .menu-content {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding-top: 100px;
+  }
+  
+  .menu-content a {
+    color: #ff6961;
+    font-size: 27px;
+   
+  }
+  
+  .texto-home {
+  margin-bottom: 400px;
+  height: 210px;
   align-items: center;
-  justify-content: center;
+  text-align: center;
+  font-family: 'Yeseva One', serif;
+  color: #fff3e2;
+  
+  }
+  
+  
+  .imgfilm:hover {
+    box-shadow: 10px 10px 15px -10px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .img-personaje {
+  
+    width: 210px;
+    height: 210px;
+ 
+  }
+  
+  
+  #root {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;  
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 7rem;
+    padding-right: 5rem;
+    margin: auto;
+  
+  }
+  
+  
+  .filterandsort-section {
+    display: flex;
+    /* margin-left: 800px;
+    margin-right: 200px; */
+    margin: auto;
+    padding-top: 200px;
+    justify-content: space-around;
+    width: 400px;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+  
+  
+  #filter-section {
+    width: 210px;
+    max-width: 210px;
+    height: 40px;
+    border-radius: 100px;
+    text-align: center;
+    margin:auto;
+    background-color: #fff3e2;
+    color: #ff6961;
+    font-family: 'Yeseva One', serif;
+    font-size: 1.3rem;
+    padding-left: 5px;
+  
+  }
+  
+  #sort-section {
+    height: 40px;
+    border-radius: 100px;
+    text-align: center;
+    margin-left: 200px;
+    background-color: #fff3e2;
+    color: #ff6961;
+    font-family: 'Yeseva One', serif;
+    font-size: 1.3rem;
+    padding-left: 5px;
+  }
+  
+  
+  .characters-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    /* margin-left: 800px;
+    margin-right: 200px; */
+    padding-top: 200px;
+    justify-content: space-around;
+    width: 400px;
+    padding-bottom: 2rem;
+  }
+  
+  #persByFilm {
+    width: 330px;
+    max-width: 330px;
+    height: auto;
+    border-radius: 100px;
+    padding: 5px;
+    text-align: center;
+    margin-left: 200px;
+    background-color: #fff3e2;
+    color: #ff6961;
+    font-family: 'Yeseva One', serif;
+    font-size: 1.3rem;
+  }
+  
+  #selectSort {
+    width: 210px;
+    max-width: 210px;
+    height: 40px;
+    border-radius: 100px;
+    text-align: center;
+    margin-left: 200px;
+    background-color: #fff3e2;
+    color: #ff6961;
+    font-family: 'Yeseva One', serif;
+    font-size: 1.3rem;
+    padding-left: 5px;
+  }
+
+  }
+
+
+@media screen and (max-width:540px) {
+
+ 
+  .imgtotoro{
+    width: 380px;
+    display: block;
+    margin: auto;
+    margin-top: 150px;
+  }
+
+  
+  #sec-1 {
+    display: flex;
+    width: 600px;
+    align-items: center;
+
+  }
+
+  #sec-2 {
+    justify-content: space-around;
+    align-items: normal;
+    margin:auto;
+    padding: 50px; 
+    display: flex;
+    width: 600px;
+  }
+  
+  .scroll-down {
+    display: none;
+    height: 50px;
+    width: 30px;
+    border: 2px solid black;
+    position: absolute;
+    left: 90%;
+    bottom: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    
+  }
+
+  h1 {
+    font-family: "Yeseva One", serif;
+    font-size: 42px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #cf2d25;
+    margin: auto;
+    margin-bottom: 100px;
   }
   
   #menutitle {
     font-family: "Yeseva One", serif;
-    font-size: 20px;
+    font-size: 45px;
     color: #da352d;
     padding-left: 75px;
-    /* width: 30em; */
   }
   
   h3 {
     font-family: "Song Myung", serif;
-    font-size: 10px;
+    font-size: 20px;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: #fff3e2;
   }
   
+  main {
+    font-family: "Yeseva One", serif;
+    font-size: 20px;
+    color: #fff3e2;
+  }
+  
+  .audioghibli {
+    align-items: top right;
+    justify-content: right;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  
   .titulo {
-    font-size: 10px;
+    font-size: 21px;
     font-family: 'Yeseva One', serif;
     color: #fff3e2;
     text-align: center;
@@ -491,7 +758,7 @@ color: #fff3e2;
   }
   
   .nombre-personaje {
-    font-size: 10px;
+    font-size: 21px;
     font-family: 'Yeseva One', serif;
     color: #fff3e2;
     text-align: center;
@@ -501,18 +768,13 @@ color: #fff3e2;
     margin: 10px;
   }
   
-  /* .directoris {
-    font-family: "Yeseva One", serif;
-    color: #fff3e2;
-    text-align: center;
-  } */
   
   #persByFilm {
     font-family: "Yeseva One", serif;
     border-radius: 60px;
     padding: 30px;
     text-align: center;
-    margin-left: 10px;
+    margin-left: 500px;
     background-color: #fff3e2;
     color: #ff6961;
   }
@@ -522,16 +784,18 @@ color: #fff3e2;
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    padding-top: 100px;
+    max-width: 200px;
   }
   
   .menu-content a {
     color: #ff6961;
-    font-size: 15px;
+    font-size: 27px;
     text-decoration: none;
-    justify-content: center;
+    justify-content: normal;
     text-align: center;
-    width: 100px;
-    height: 30px;
+    width: 200px;
+    height: 60px;
     padding: 0.6rem;
     margin: 2rem 2rem 2rem;
     border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
@@ -539,8 +803,10 @@ color: #fff3e2;
   
   
   .imgfilm {
-    width: 100px;
-    height: 100px;
+    display: block;
+    margin: auto;
+    width: 210px;
+    height: 210px;
     border: 2px solid #2a729ed5;
     border-radius: 200%;
     object-fit: cover;
@@ -581,7 +847,7 @@ color: #fff3e2;
   font-family: 'Yeseva One', serif;
   color: #fff3e2;
   
-  }  
+  }
   
   .img-personaje {
     display: block;
@@ -598,7 +864,7 @@ color: #fff3e2;
   
   #root {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 40px;  
     justify-content: space-around;
     align-items: center;
@@ -606,17 +872,17 @@ color: #fff3e2;
     padding-left: 7rem;
     padding-right: 5rem;
     margin: auto;
+    width: 600px;
   
   }
   
   
   .filterandsort-section {
     display: flex;
-    margin-left: 100px;
-    margin-right: 50px;
-    padding-top: 50px;
+    margin-left: 5rem;
+    padding-top: 200px;
     justify-content: space-around;
-    width: 100px;
+    width: 400px;
     padding-bottom: 2rem;
     text-align: center;
   }
@@ -628,11 +894,11 @@ color: #fff3e2;
     height: 40px;
     border-radius: 100px;
     text-align: center;
-    margin-left: 200px;
+    margin:auto;
     background-color: #fff3e2;
     color: #ff6961;
     font-family: 'Yeseva One', serif;
-    font-size: 20px;
+    font-size: 1.3rem;
     padding-left: 5px;
   
   }
@@ -648,26 +914,13 @@ color: #fff3e2;
     font-size: 1.3rem;
     padding-left: 5px;
   }
-  
-  .searchFilm {
-    width: 210px;
-    max-width: 210px;
-    height: 40px;
-    border-radius: 100px;
-    text-align: center;
-    margin-left: 200px;
-    background-color: #fff3e2;
-    color: #ff6961;
-    font-family: 'Yeseva One', serif;
-    font-size: 1.3rem;
-    margin-right: 4rem;
-  
-  }
+
   
   .characters-section {
     display: flex;
-    margin-left: 800px;
-    margin-right: 200px;
+    margin: auto;
+    /* margin-left: 800px;
+    margin-right: 200px; */
     padding-top: 200px;
     justify-content: space-around;
     width: 400px;
@@ -694,7 +947,7 @@ color: #fff3e2;
     height: 40px;
     border-radius: 100px;
     text-align: center;
-    margin-left: 200px;
+    margin-left: 60px;
     background-color: #fff3e2;
     color: #ff6961;
     font-family: 'Yeseva One', serif;
@@ -703,3 +956,279 @@ color: #fff3e2;
   }
 
 }
+
+@media(min-width:1024px) {
+  /* #root {
+      width: 700px;
+  } */
+
+
+  
+  .imgtotoro{
+    width: 400px;
+    display: block;
+    margin: auto;
+    margin-top: 150px;
+  }
+  
+
+  h1 {
+    font-family: "Yeseva One", serif;
+    font-size: 70px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #cf2d25;
+    margin: auto;
+    margin-bottom: 100px;
+  }
+  
+  #menutitle {
+    font-family: "Yeseva One", serif;
+    font-size: 40px;
+    color: #da352d;
+    padding-left: 65px;
+  }
+  
+  h3 {
+    font-family: "Song Myung", serif;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff3e2;
+  }
+  
+  main {
+    font-family: "Yeseva One", serif;
+    font-size: 20px;
+    color: #fff3e2;
+  }
+  
+  .audioghibli {
+    align-items: top right;
+    justify-content: right;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+  }
+  
+  .titulo {
+    font-size: 19px;
+    font-family: 'Yeseva One', serif;
+    color: #fff3e2;
+    text-align: center;
+    border-radius: 100px;
+    align-items: center;
+    padding: 5px;
+    margin: 10px;
+  }
+  
+  .nombre-personaje {
+    font-size: 21px;
+    font-family: 'Yeseva One', serif;
+    color: #fff3e2;
+    text-align: center;
+    border-radius: 100px;
+    align-items: center;
+    padding: 5px;
+    margin: 10px;
+  }
+  
+
+  .menu-content a {
+    color: #ff6961;
+    font-size: 25px;
+    text-decoration: none;
+    justify-content: normal;
+    text-align: center;
+    width: 170px;
+    height: 50px;
+    padding: 0.5rem;
+    margin: 2rem 2rem 2rem;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+  }
+  
+
+  .imgfilm {
+    display: block;
+    margin: auto;
+    width: 190px;
+    height: 190px;
+    border: 2px solid #2a729ed5;
+    border-radius: 200%;
+    object-fit: cover;
+    cursor: pointer;
+    justify-content: space-around;
+  }
+  
+  .foto1 {
+   
+      display: block;
+      margin: auto;
+      width: 190px;
+      height: 190px;
+      border: 2px solid #2a729ed5;
+      border-radius: 200%;
+      object-fit: cover;
+      cursor: pointer;
+  }
+  
+  .foto2 {
+  
+    display: block;
+      margin: auto;
+      width: 190px;
+      height: 190px;
+      border: 2px solid #2a729ed5;
+      border-radius: 200%;
+      object-fit: cover;
+      cursor: pointer;
+  
+  }
+  
+  .texto-home {
+  margin-bottom: 400px;
+  height: 210px;
+  align-items: center;
+  text-align: center;
+  font-family: 'Yeseva One', serif;
+  color: #fff3e2;
+  
+  }
+  
+  
+  .imgfilm:hover {
+    box-shadow: 10px 10px 15px -10px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .img-personaje {
+    display: block;
+    margin: auto;
+    width: 190px;
+    height: 190px;
+    border: 2px solid #2a729ed5;
+    border-radius: 200%;
+    object-fit: cover;
+    cursor: pointer;
+    align-items: center;
+  }
+  
+  
+  #root {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;  
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 7rem;
+    padding-right: 5rem;
+    margin: auto;
+  
+  }
+  
+  .filterandsort-section {
+    display: flex;
+    margin: auto;
+    /* margin-left: 800px;
+    margin-right: 200px; */
+    padding-top: 200px;
+    justify-content: space-around;
+    width: 400px;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+  
+  
+  #filter-section {
+    
+    width: 210px;
+    max-width: 210px;
+    height: 40px;
+    border-radius: 100px;
+    text-align: center;
+    margin-left: 200px;
+    background-color: #fff3e2;
+    color: #ff6961;
+    font-family: 'Yeseva One', serif;
+    font-size: 1.2rem;
+    padding-left: 5px;
+  
+  }
+  
+  #sort-section {
+    height: 40px;
+    border-radius: 100px;
+    text-align: center;
+    margin-left: 200px;
+    background-color: #fff3e2;
+    color: #ff6961;
+    font-family: 'Yeseva One', serif;
+    font-size: 1.2rem;
+    padding-left: 5px;
+  }
+
+  #persByFilm {
+  width: 330px;
+  max-width: 330px;
+  height: auto;
+  border-radius: 100px;
+  padding: 5px;
+  text-align: center;
+  margin-left: 200px;
+  background-color: #fff3e2;
+  color: #ff6961;
+  font-family: 'Yeseva One', serif;
+  font-size: 1.2rem;
+}
+ 
+} 
+
+@media(min-width:2560px) {
+  #sec-2 {
+    width: 80%;
+  }
+  /* #root {
+      width: auto;
+  } */
+  .imgtotoro {
+    width: 520px;
+  }
+} 
+
+ @media(max-width:890px) {
+  #root {
+      width: 600px;
+  }
+} 
+
+
+@media(max-width:690px) {
+  #root {
+      width: 500px;
+  }
+}
+
+
+@media (max-width: 800px) {
+  #sec-1 img {
+      width: 430px;
+      height: auto;
+  }
+}
+
+@media (max-width: 550px) {
+  #sec-1 img {
+      width: 330px;
+      height: auto;
+  }
+}
+
+@media screen and (max-width:280px) {
+.audioghibli {
+  display: none;
+}
+}
+
