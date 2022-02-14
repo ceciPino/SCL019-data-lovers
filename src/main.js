@@ -12,6 +12,10 @@ const casita = document.getElementsByClassName("sec-2");
 sectionAfiche.innerHTML = "";
 
 let sinCara = document.createElement("img");
+sinCara.setAttribute("src", '/icono ghibli.png');
+sinCara.setAttribute("class", "foto2");
+sectionAfiche.appendChild(sinCara);
+
 sinCara.setAttribute("src", '/Copia de icono ghibli 2.png');
 sinCara.setAttribute("class", "foto2");
 sectionAfiche.appendChild(sinCara);
