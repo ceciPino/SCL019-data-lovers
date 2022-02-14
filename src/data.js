@@ -5,12 +5,7 @@ console.log(data)
 //FUNCION PARA FILTRAR PELICULAS POR DIRECTORES
 export const filterDirectors = (filterItem, data) => { //filterItem se declara en main.js
   switch (filterItem) { //se utiliza un switch para evaluar los datos de filterItem y compararlos con diferentes casos
-    case 'allthefilms':
-      {
-        const allTheFilms= data.filter(all => all.director !== 'none');
-
-        return allTheFilms
-      }
+  
     case 'directedByHayao': // se ejecutan declaraciones asociadas a cada case
       {
         const hayaoDirector= data.filter(a => a.director === 'Hayao Miyazaki');// dentro de cada declaracion se usa .filter para encontrar los nombres de los directores
@@ -54,11 +49,7 @@ export const filterDirectors = (filterItem, data) => { //filterItem se declara e
 //FUNCION PARA FILTRAR PERSONAJES POR PELICULAS
 export const filterbyFilms= (filterCharacter, data) => {
   switch(filterCharacter) {
-    case 'allcharacters':
-      {
-        const allTheCharacters= data.filter(all => all.title !== 'none');
-        return allTheCharacters
-      }
+
     case 'castle-in-the-sky':
       {
         const castleInTheSky= data.filter(a => a.title === 'Castle in the Sky');

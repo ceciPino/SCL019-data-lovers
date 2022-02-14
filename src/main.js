@@ -8,7 +8,7 @@ const dataghibli = data.films;
 const sectionAfiche = document.getElementById("root");
 
 //HOME
-const casita = document.getElementsByClassName("sec-2");
+const casita =() => {
 sectionAfiche.innerHTML = "";
 
 let sinCara = document.createElement("img");
@@ -26,29 +26,30 @@ funFact.innerHTML = "The term Ghibli is an Italian word for a summer wind coming
 sinCara.appendChild(funFact);
 
 let sinCara1 = document.createElement("img");
-sinCara1.setAttribute("src", '/Copia de icono ghibli 3.png');
+sinCara1.setAttribute("src", 'Copia de icono ghibli 3.png');
 sinCara1.setAttribute("class", "foto2");
 sectionAfiche.appendChild(sinCara1);
 
 let sinCara2 = document.createElement("img");
-sinCara2.setAttribute("src", '/Copia de icono ghibli 4.png');
+sinCara2.setAttribute("src", 'Copia de icono ghibli 4.png');
 sinCara2.setAttribute("class", "foto2");
 sectionAfiche.appendChild(sinCara2);
 
 let sinCara3 = document.createElement("img");
-sinCara3.setAttribute("src", '/Copia de icono ghibli 5.png');
+sinCara3.setAttribute("src", 'Copia de icono ghibli 5.png');
 sinCara3.setAttribute("class", "foto2");
 sectionAfiche.appendChild(sinCara3);
 
 let sinCara4 = document.createElement("img");
-sinCara4.setAttribute("src", '/Copia de icono ghibli.png');
+sinCara4.setAttribute("src", 'Copia de icono ghibli.png');
 sinCara4.setAttribute("class", "foto2");
 sectionAfiche.appendChild(sinCara4);
 
 let sinCara5 = document.createElement("img");
-sinCara5.setAttribute("src", '/icono ghibli.png');
+sinCara5.setAttribute("src", 'icono ghibli.png');
 sinCara5.setAttribute("class", "foto2");
 sectionAfiche.appendChild(sinCara5);
+}
 
 
 // FUNCION PARA MOSTRAR PERSONAJES
@@ -125,7 +126,7 @@ const showFilms = (dataghibli) => {
 
   }
 
-  //FOTOS DIRECTORES
+  //FOTOS SECCION DIRECTORES
 
   let hayaoMiyazaki = document.getElementById("Hayao Miyazaki");
   let hayaoFoto = document.createElement("img");
@@ -162,7 +163,6 @@ const showFilms = (dataghibli) => {
   hiromasaFoto.setAttribute("src", 'hiromasa yonebayashi.PNG');
   hiromasaFoto.setAttribute("class", "foto1");
   hiromasaYonebayashi.appendChild(hiromasaFoto);
-
 
   }
 
@@ -239,11 +239,13 @@ document.getElementById("directores").addEventListener("click", () => {
 });
 
 document.getElementById("inicio").addEventListener("click", () => {
-  sectionAfiche.innerHTML= "";
+  // sectionAfiche.innerHTML= "";
+  casita();
   filterandsort[0].style.display = "none";
   charactersSection[0].style.display = 'none';
 
 });
 
+window.addEventListener("load", casita, false);
 
 
