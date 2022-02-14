@@ -11,7 +11,7 @@
 
   </head>
 
-  <body>
+  <body window.onload="casita();">
     <section id="sec-1">
       <header>
         <img class="imgtotoro" src="images/totoro.png" alt="imgtotoro"/>
@@ -44,7 +44,7 @@
       </select>
 
         <select name="Sortby" id="selectSort">
-          <option value="default">---</option>
+          <option value="default">Sort By</option>
           <option value="Newest">Newest First</option>
           <option value="Oldest">Oldest First</option> 
           <option value="A_Z">A-Z</option>
@@ -57,7 +57,7 @@
     <!-- SECCION FILTRADO PERSONAJES -->
     <div class="characters-section" style= "display: none;">
       <select id="persByFilm">
-        <option value="allcharacters"> Filter By: </option>
+        <option selected disabled> Filter By</option>
         <option value="castle-in-the-sky">Castle in the Sky</option>
         <option value="my-neighbor-totoro">My Neighbor Totoro</option>
         <option value="kikis-delivery-service">Kiki's Delivery Service</option>
@@ -99,7 +99,9 @@
 
       </main>
 
-      <div id="root"></div>
+      <div id="root">
+        
+      </div>
 
       
     </section>
@@ -108,6 +110,11 @@
       <h3>Este es un proyecto creado por Amanda, Anabella y Ceci.</h3>
     </footer>
 
-    <script src="main.js" type="module"></script>
+    <script src="main.js" type="module">
+      function casita() {
+        }
+        window.onload = casita;
+    </script>
   </body>
 </html>
+
