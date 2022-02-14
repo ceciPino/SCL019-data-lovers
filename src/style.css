@@ -195,7 +195,7 @@ main {
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  padding-top: 100px;
+  padding-top: 0px;
 }
 
 .menu-content a {
@@ -241,7 +241,6 @@ main {
 
 #inicio:hover {
   background-color: #d4b5cb;
-
 }
 
 .imgfilm {
@@ -257,7 +256,6 @@ main {
 }
 
 .foto1 {
- 
   display: block;
   margin: auto;
   width: 210px;
@@ -269,27 +267,47 @@ main {
 }
 
 .foto2 {
-
   display: block;
     margin: auto;
-    width: 210px;
-    height: 210px;
+    width: 250px;
+    height: 250px;
     border: 2px solid #2a729ed5;
     border-radius: 200%;
     object-fit: cover;
     cursor: pointer;
-
+    opacity: 100%;
 }
+
+.foto2:hover {
+  opacity: 0%;
+  transition: 1s;
+  display: hidden;
+}
+
+.funfacts {
+  font-family: 'Yeseva One', serif;
+  color: #fff3e2;
+  display: block;
+  margin: auto;
+  font-size: 15px;
+  text-align: center;
+  }
 
 .texto-home {
-margin-bottom: 400px;
-height: 210px;
-align-items: center;
-text-align: center;
-font-family: 'Yeseva One', serif;
-color: #fff3e2;
+  padding-left: 70px;
+  padding-right: 100px;
+  height: 210px;
+  align-items: center;
+  text-align: justify;
+  font-family: 'Yeseva One', serif;
+  color: #fff3e2;
+  display: flex;
+  margin: auto;
+  font-size: 22px;
+  border-color: #fefee3;
+  border-radius: 30%;
+  }
 
-}
 
 
 .imgfilm:hover {
@@ -327,8 +345,6 @@ color: #fff3e2;
 .filterandsort-section {
   display: flex;
   margin: auto;
-  /* margin-left: 800px;
-  margin-right: 200px; */
   padding-top: 200px;
   justify-content: space-around;
   width: 400px;
@@ -423,7 +439,6 @@ color: #fff3e2;
 /* RESPONSIVE */
 
 @media screen and (max-width:820px) {
-  
   .imgtotoro{
     width: 380px;
     display: block;
@@ -506,8 +521,7 @@ color: #fff3e2;
     }
   }
 
- 
-  .titulo {
+    .titulo {
     font-size: 21px;
   
   }
@@ -516,8 +530,6 @@ color: #fff3e2;
     font-size: 21px;
 
   }
-  
-
   
   #persByFilm {
     font-family: "Yeseva One", serif;
@@ -543,21 +555,9 @@ color: #fff3e2;
    
   }
   
-  .texto-home {
-  margin-bottom: 400px;
-  height: 210px;
-  align-items: center;
-  text-align: center;
-  font-family: 'Yeseva One', serif;
-  color: #fff3e2;
-  
-  }
-  
-  
   .imgfilm:hover {
     box-shadow: 10px 10px 15px -10px rgba(0, 0, 0, 0.2);
   }
-  
   
   .img-personaje {
   
@@ -565,7 +565,6 @@ color: #fff3e2;
     height: 210px;
  
   }
-  
   
   #root {
     display: grid;
@@ -580,7 +579,6 @@ color: #fff3e2;
   
   }
   
-  
   .filterandsort-section {
     display: flex;
     /* margin-left: 800px;
@@ -592,7 +590,6 @@ color: #fff3e2;
     padding-bottom: 2rem;
     text-align: center;
   }
-  
   
   #filter-section {
     width: 210px;
@@ -626,8 +623,6 @@ color: #fff3e2;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    /* margin-left: 800px;
-    margin-right: 200px; */
     padding-top: 200px;
     justify-content: space-around;
     width: 400px;
@@ -661,13 +656,11 @@ color: #fff3e2;
     font-size: 1.3rem;
     padding-left: 5px;
   }
-
   }
 
 
 @media screen and (max-width:540px) {
 
- 
   .imgtotoro{
     width: 380px;
     display: block;
@@ -680,7 +673,6 @@ color: #fff3e2;
     display: flex;
     width: 600px;
     align-items: center;
-
   }
 
   #sec-2 {
@@ -702,7 +694,6 @@ color: #fff3e2;
     bottom: 20px;
     border-radius: 50px;
     cursor: pointer;
-    
   }
 
   h1 {
@@ -768,7 +759,6 @@ color: #fff3e2;
     margin: 10px;
   }
   
-  
   #persByFilm {
     font-family: "Yeseva One", serif;
     border-radius: 60px;
@@ -778,7 +768,6 @@ color: #fff3e2;
     background-color: #fff3e2;
     color: #ff6961;
   }
-  
   
   .menu-content {
     display: flex;
@@ -801,7 +790,6 @@ color: #fff3e2;
     border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
   }
   
-  
   .imgfilm {
     display: block;
     margin: auto;
@@ -815,7 +803,6 @@ color: #fff3e2;
   }
   
   .foto1 {
-   
       display: block;
       margin: auto;
       width: 210px;
@@ -836,17 +823,6 @@ color: #fff3e2;
       border-radius: 200%;
       object-fit: cover;
       cursor: pointer;
-  
-  }
-  
-  .texto-home {
-  margin-bottom: 400px;
-  height: 210px;
-  align-items: center;
-  text-align: center;
-  font-family: 'Yeseva One', serif;
-  color: #fff3e2;
-  
   }
   
   .img-personaje {
@@ -860,7 +836,6 @@ color: #fff3e2;
     cursor: pointer;
     align-items: center;
   }
-  
   
   #root {
     display: grid;
@@ -876,7 +851,6 @@ color: #fff3e2;
   
   }
   
-  
   .filterandsort-section {
     display: flex;
     margin-left: 5rem;
@@ -886,7 +860,6 @@ color: #fff3e2;
     padding-bottom: 2rem;
     text-align: center;
   }
-  
   
   #filter-section {
     width: 210px;
@@ -915,12 +888,9 @@ color: #fff3e2;
     padding-left: 5px;
   }
 
-  
   .characters-section {
     display: flex;
     margin: auto;
-    /* margin-left: 800px;
-    margin-right: 200px; */
     padding-top: 200px;
     justify-content: space-around;
     width: 400px;
@@ -958,12 +928,6 @@ color: #fff3e2;
 }
 
 @media(min-width:1024px) {
-  /* #root {
-      width: 700px;
-  } */
-
-
-  
   .imgtotoro{
     width: 400px;
     display: block;
@@ -1078,25 +1042,14 @@ color: #fff3e2;
   
     display: block;
       margin: auto;
-      width: 190px;
-      height: 190px;
+      width: 250px;
+      height: 250px;
       border: 2px solid #2a729ed5;
       border-radius: 200%;
       object-fit: cover;
       cursor: pointer;
   
   }
-  
-  .texto-home {
-  margin-bottom: 400px;
-  height: 210px;
-  align-items: center;
-  text-align: center;
-  font-family: 'Yeseva One', serif;
-  color: #fff3e2;
-  
-  }
-  
   
   .imgfilm:hover {
     box-shadow: 10px 10px 15px -10px rgba(0, 0, 0, 0.2);
@@ -1132,8 +1085,6 @@ color: #fff3e2;
   .filterandsort-section {
     display: flex;
     margin: auto;
-    /* margin-left: 800px;
-    margin-right: 200px; */
     padding-top: 200px;
     justify-content: space-around;
     width: 400px;
@@ -1183,16 +1134,12 @@ color: #fff3e2;
   font-family: 'Yeseva One', serif;
   font-size: 1.2rem;
 }
- 
 } 
 
 @media(min-width:2560px) {
   #sec-2 {
     width: 80%;
   }
-  /* #root {
-      width: auto;
-  } */
   .imgtotoro {
     width: 520px;
   }

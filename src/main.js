@@ -8,13 +8,43 @@ const dataghibli = data.films;
 const sectionAfiche = document.getElementById("root");
 
 //HOME
-// const casita = document.getElementsByClassName("sec-2");
-// sectionAfiche.innerHTML = "";
+const casita = document.getElementsByClassName("sec-2");
+sectionAfiche.innerHTML = "";
 
-// let sinCara = document.createElement("img");
-// sinCara.setAttribute("src", '/icono ghibli.png');
-// sinCara.setAttribute("class", "foto2");
-// sectionAfiche.appendChild(sinCara);
+let sinCara = document.createElement("img");
+sinCara.setAttribute("src", '/Copia de icono ghibli 2.png');
+sinCara.setAttribute("class", "foto2");
+sectionAfiche.appendChild(sinCara);
+
+let funFact = document.createElement("p")
+funFact.setAttribute("class", "funfacts")
+funFact.innerHTML = "The term Ghibli is an Italian word for a summer wind coming from the Sahara, affecting several countries in North Africa and Southern European countries. There was also a World War II aircraft from the same country which garnered the same nickname. Its name indicated the studio's ambitions to be a force within the animation industry. Judging by their catalog of respected works, it is safe to say they accomplished their goal.";
+sinCara.appendChild(funFact);
+
+let sinCara1 = document.createElement("img");
+sinCara1.setAttribute("src", '/Copia de icono ghibli 3.png');
+sinCara1.setAttribute("class", "foto2");
+sectionAfiche.appendChild(sinCara1);
+
+let sinCara2 = document.createElement("img");
+sinCara2.setAttribute("src", '/Copia de icono ghibli 4.png');
+sinCara2.setAttribute("class", "foto2");
+sectionAfiche.appendChild(sinCara2);
+
+let sinCara3 = document.createElement("img");
+sinCara3.setAttribute("src", '/Copia de icono ghibli 5.png');
+sinCara3.setAttribute("class", "foto2");
+sectionAfiche.appendChild(sinCara3);
+
+let sinCara4 = document.createElement("img");
+sinCara4.setAttribute("src", '/Copia de icono ghibli.png');
+sinCara4.setAttribute("class", "foto2");
+sectionAfiche.appendChild(sinCara4);
+
+let sinCara5 = document.createElement("img");
+sinCara5.setAttribute("src", '/icono ghibli.png');
+sinCara5.setAttribute("class", "foto2");
+sectionAfiche.appendChild(sinCara5);
 
 
 // FUNCION PARA MOSTRAR PERSONAJES
@@ -78,7 +108,7 @@ const showFilms = (dataghibli) => {
     showDirectors.add(pelis.director);
     }
 
-    let arrayDirectoris = Array.from(showDirectors); // convirtiendo set en array
+    let arrayDirectoris = Array.from(showDirectors); // convertimos set en array
     for (let i = 0; i < arrayDirectoris.length; i++){
 
     let directors = document.createElement("p");
