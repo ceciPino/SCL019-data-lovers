@@ -158,9 +158,6 @@ export const filterbyFilms= (filterCharacter, data) => {
 };
 
 
-
-
-
 //FUNCION  SORT PARA ORDENAR PERSONAJES
 
 export const sortNewest = (data) => {

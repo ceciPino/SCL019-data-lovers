@@ -2,6 +2,7 @@
 import * as all from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 // import modalBox from "./modal.js";
+import filter from "./filter.js"
 
 //Acceder a data de las peliculas
 const dataghibli = data.films;
