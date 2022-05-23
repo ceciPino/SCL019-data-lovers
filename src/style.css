@@ -48,7 +48,6 @@ section {
   margin:auto;
   padding: 50px; 
   display: flex;
-  /* width: fit-content; */
 }
 
 .scroll-down {
@@ -104,7 +103,7 @@ body {
   background-image: url(https://www.teahub.io/photos/full/62-626076_studio-ghibli-sky-background.jpg);
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-size: cover;
   background-color: #fefee3;
   align-items: center;

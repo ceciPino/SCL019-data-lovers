@@ -2,7 +2,7 @@
 import * as all from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 // import modalBox from "./modal.js";
-import filter from "./filter.js"
+// import filter from "./filter.js"
 
 //Acceder a data de las peliculas
 const dataghibli = data.films;
@@ -92,9 +92,6 @@ const showFilms = (dataghibli) => {
     nombre.setAttribute("class", "titulo");
 
     nombre.innerHTML = dataghibli[i].title;
-    // divImagen.addEventListener("click", () => {
-    //  modalBox()
-    // });
 
     divImagen.appendChild(image);
     sectionAfiche.appendChild(divImagen);

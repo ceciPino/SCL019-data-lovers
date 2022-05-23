@@ -172,7 +172,7 @@ export const sortOldest = (data) => {
         return a.release_date - b.release_date;
     });
 return sortedOld;
-} 
+}
 
 export const sortAZ = (data) => {
   let sortedData=[];
