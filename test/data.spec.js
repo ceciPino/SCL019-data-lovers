@@ -113,6 +113,7 @@ describe("filterbyFilms devuelve los personajes de la pelicula que se elija", ()
 
   it("Deberia retornar para My Neighbor Totoro el personaje [Mei Kusakabe]", () => {
     let dataPersonajes = filterbyFilms('my-neighbor-totoro', datatest);
+    console.log(datatest[1].people)
     expect(dataPersonajes[1].people[0].name).toEqual('Mei Kusakabe');
   });
 })
